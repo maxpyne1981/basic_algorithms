@@ -19,6 +19,7 @@ endif()
 
 set(SOURCES
     src/main.cpp
+    src/LinkedList.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/src/) 

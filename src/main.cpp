@@ -1,7 +1,8 @@
 #include <iostream>
-using namespace std;
+#include "LinkedList.h" 
 int main(){
-    cout << "hello world !" << endl;
+    LinkedList linkedlist;
+    linkedlist.Run();
 
     return 0;
 }
