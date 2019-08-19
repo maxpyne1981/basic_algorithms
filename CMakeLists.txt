@@ -22,6 +22,7 @@ set(SOURCES
     src/LinkedList.cpp
     src/Array.cpp
     src/Search.cpp
+    src/Bits.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/src/) 
