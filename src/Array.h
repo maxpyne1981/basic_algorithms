@@ -7,7 +7,7 @@ public:
     ~Array();
 
     void Run();
-    void print_array(int *arr, int n);
+    static void print_array(int *arr, int n);
     
 private:
     int MaxSumOfContiguousArray(int* arr, int n);

@@ -3,6 +3,9 @@
 #include "Array.h" 
 #include "Search.h" 
 #include "Bits.h" 
+#include "Sort.h" 
+#include "BST.h" 
+#include "Graph.h" 
 int main(){
 
     // linked list
@@ -19,8 +22,16 @@ int main(){
     //search.Run();
 
 
-    Bits bits;
-    bits.Run();
+    //Bits bits;
+    //bits.Run();
+
+    //Sort sort;
+    //sort.Run();
+
+    BST::Run();
+
+    //Graph graph;
+    //graph.Run();
 
     return 0;
 }

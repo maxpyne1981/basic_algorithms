@@ -23,6 +23,9 @@ set(SOURCES
     src/Array.cpp
     src/Search.cpp
     src/Bits.cpp
+    src/Sort.cpp
+    src/BST.cpp
+    src/Graph.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/src/) 
