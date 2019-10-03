@@ -6,6 +6,7 @@
 #include "Sort.h" 
 #include "BST.h" 
 #include "Graph.h" 
+#include "Algo.h" 
 int main(){
 
     // linked list
@@ -28,10 +29,12 @@ int main(){
     //Sort sort;
     //sort.Run();
 
-    BST::Run();
+    //BST::Run();
 
     //Graph graph;
     //graph.Run();
+
+    Algo::Run();
 
     return 0;
 }
