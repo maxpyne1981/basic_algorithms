@@ -116,12 +116,45 @@ string multiply(string lhs, string rhs) {
 
     return result.erase(0, min(result.find_first_not_of('0'), result.size()-1));
 }
+/////////////////////////////////////////
+//////////// class functions ////////////
+/////////////////////////////////////////
+// use Two Pointers
+bool Algo::IsPalindrome(string str){
+    if(str.empty()) return false;
 
+    int start(0);
+    int end(str.size()-1);
+    while(start <= end){
+        if(str[start++] != str[end--]) 
+            return false;
+    }
+    return true;
+}
+int Algo::FindSquaredSumOfDigits(int num){
+   if(num<0) return 0;
+   int sum(0);
+   while(num > 0){
+        int digit = num % 10;     
+        sum += digit*digit;
+        num /= 10;
+   }
+   return sum;
+}
+
+/////////////////////////////////////////
 //////////// Run tests //////////////////
+/////////////////////////////////////////
 void Algo::Run(){
-    string lhs = "3141592653589793238462643383279502884197169399375105820974944592";
+    /*string lhs = "3141592653589793238462643383279502884197169399375105820974944592";
     string rhs = "2718281828459045235360287471352662497757247093699959574966967627";
-    cout << "Karatsuba multiplication : "<< multiply(lhs, rhs) << endl;
+    cout << "Karatsuba multiplication : "<< multiply(lhs, rhs) << endl;*/
+
+    /*string str = "0ABCDCBA";
+    cout <<"Is "<< str << " a palindrome  "<< IsPalindrome(str) << endl ;*/
+    
+    int num = 12345;
+    cout<< "FindSquaredSumOfDigits " << num <<" is "<< FindSquaredSumOfDigits(num) << endl;
 }
 
 

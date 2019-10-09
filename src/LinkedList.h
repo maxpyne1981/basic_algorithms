@@ -16,7 +16,9 @@ public:
     void append(int a); 
     Node* last();
     void print();
-    void print(Node* node);
+    static void print(Node* node);
+
+    static Node* reverse(Node* head);
     
     Node* head;
 };

@@ -34,7 +34,8 @@ int main(){
     //Graph graph;
     //graph.Run();
 
-    Algo::Run();
+    Algo algo;
+    algo.Run();
 
     return 0;
 }

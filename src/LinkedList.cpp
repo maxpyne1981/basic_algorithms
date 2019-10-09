@@ -19,7 +19,12 @@ void LinkedList::Run(){
     l.append(5);
     l.append(7);
     l.append(9);
-    l.print();
+    print(l.head);
+
+    cout << "\n printing reverse list"<<endl;
+    Node* h = reverse(l.head);
+    print(h);
+    cout << endl;
 }
 
 void LinkedList::append(int a){
@@ -57,6 +62,21 @@ void LinkedList::print(Node* node){
 
 
 
+
+Node* LinkedList::reverse(Node* head){
+    if(!head) return nullptr;
+    
+    Node* current = head;
+    Node* next = nullptr;
+    Node* prev = nullptr;
+    while(current){
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    return prev;
+}
 
 ///////////////////////////////////////////////////////////
 /////////////////////ARRAY ////////////////////////////////

@@ -1,11 +1,13 @@
 #pragma once
 
-
+#include <string>
 class Algo{
 public:
     Algo();
     ~Algo();
 
-    static void Run();
+    void Run();
 private:
+    bool IsPalindrome(std::string str);
+    int FindSquaredSumOfDigits(int num);
 };
