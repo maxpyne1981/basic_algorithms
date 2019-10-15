@@ -19,6 +19,38 @@ void swap(int* x, int* y){
     *y = temp;
 }
 
+//////////////////////////////////////////
+//////////// Bubble Sort /////////////////
+//////////////////////////////////////////
+void Sort::BubbleSort(int arr[], int n){
+    cout << "Bubble sort"<< endl;
+    int i, j;
+    bool swapped;
+
+    for(i = 0; i<n-1; i++){
+        swapped = false;
+        for(j = 0; j<n-1; j++){
+            if(arr[j] > arr[j+1]){
+                swap(&arr[i], &arr[j+1]);
+                swapped = true;
+            }
+        }
+        if(!swapped) break;
+    }
+}
+void Sort::BubbleSort_Recursive(int arr[], int n){
+    if(n==1) return;
+    for(int i=0; i<n-1; i++){
+        if(arr[i] > arr[i+1]){
+            swap(&arr[i], &arr[i+1]);
+        }
+
+    }
+    BubbleSort_Recursive(arr, n-1);
+}
+
+
+
 //////////// Selection Sort //////////////////
 /*
 1. loop over every element
@@ -152,7 +184,9 @@ void Sort::Run(){
 
     //SelectionSort(arr, n);
     //QuickSort(arr, 0, n);
-    mergeSort(arr, 0, n-1);
+    //mergeSort(arr, 0, n-1);
+    //BubbleSort(arr, n);
+    BubbleSort_Recursive(arr, n);
     cout <<"sorted array array"<< endl;
     Array::print_array(arr, n);
 }

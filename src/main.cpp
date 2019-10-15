@@ -26,16 +26,16 @@ int main(){
     //Bits bits;
     //bits.Run();
 
-    //Sort sort;
-    //sort.Run();
+    Sort sort;
+    sort.Run();
 
     //BST::Run();
 
     //Graph graph;
     //graph.Run();
 
-    Algo algo;
-    algo.Run();
+    //Algo algo;
+    //algo.Run();
 
     return 0;
 }
