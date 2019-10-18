@@ -7,6 +7,7 @@
 #include "BST.h" 
 #include "Graph.h" 
 #include "Algo.h" 
+#include "Trie.h" 
 int main(){
 
     // linked list
@@ -26,8 +27,8 @@ int main(){
     //Bits bits;
     //bits.Run();
 
-    Sort sort;
-    sort.Run();
+    //Sort sort;
+    //sort.Run();
 
     //BST::Run();
 
@@ -36,6 +37,9 @@ int main(){
 
     //Algo algo;
     //algo.Run();
+
+
+    Trie::Run();
 
     return 0;
 }

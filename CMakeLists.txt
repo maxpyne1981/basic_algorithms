@@ -27,6 +27,8 @@ set(SOURCES
     src/BST.cpp
     src/Graph.cpp
     src/Algo.cpp
+    src/Heap.cpp
+    src/Trie.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/src/) 

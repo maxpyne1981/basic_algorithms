@@ -25,8 +25,15 @@ Stack
     swap() #fooStk.swap(barStk)
 '''
 
+===========================================================
+Trie
+    Trie is an efficient information reTrieval data structure.
+    M*logN, M = max length of string, N = number of keys
+    insert+search O(key_length), however the memory requirements of Trie is O(ALPHABET_SIZE * key_length * N) 
 
 
+===========================================================
+Time and space complexity
 
 Problems:
 
