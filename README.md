@@ -25,6 +25,21 @@ Stack
     swap() #fooStk.swap(barStk)
 '''
 
+
+set (unordered_set)
+'''
+    empty()
+    size()
+    max_size()
+    insert()
+    erase()
+    clear()
+    find()
+    count()
+'''
+* set is a balanced tree O(log n)
+* unordered_set is a hash table O(1)
+
 ===========================================================
 Trie
     Trie is an efficient information reTrieval data structure.

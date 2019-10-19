@@ -23,6 +23,8 @@ public:
     static bool        search(TrieNode* root, std::string key);
     static void        clear(TrieNode* root);
     static TrieNode*   createNode();
+    static bool        isEmpty(TrieNode* root);
+    static TrieNode*   remove(TrieNode* root, std::string key, int depth = 0); 
     static void Run();
 private:
 };
