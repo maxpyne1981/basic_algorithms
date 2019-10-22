@@ -9,7 +9,7 @@ Trie::Trie()
 Trie::~Trie(){
     ;
 }
-TrieNode* Trie::createNode(){
+/*TrieNode* Trie::createNode(){
     TrieNode* root = new TrieNode();
     return root;
 }
@@ -86,7 +86,7 @@ TrieNode* Trie::remove(TrieNode* root, std::string key, int depth){
         root = nullptr;
     }
     return root;
-}
+}*/
 
 ///////////////////////////////////////
 ////////////// RUN ////////////////////
@@ -109,8 +109,10 @@ void Trie::Run(){
     // Search for different keys 
     search(root, "the") ? cout << "Yes\n" : cout << "No\n"; 
     search(root, "these")? cout << "Yes\n" : cout << "No\n"; 
+    search(root, "hero")? cout << "Yes\n" : cout << "No\n"; 
+    search(root, "heri")? cout << "Yes\n" : cout << "No\n"; 
 
-    remove(root, "heroplane"); 
-    search(root, "hero") ? cout << "Yes\n" : cout << "No\n"; 
-    clear(root);
+    //remove(root, "heroplane"); 
+    //search(root, "hero") ? cout << "Yes\n" : cout << "No\n"; 
+    //clear(root);
 }
