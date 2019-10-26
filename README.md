@@ -41,6 +41,19 @@ set (unordered_set)
 * unordered_set is a hash table O(1)
 
 ===========================================================
+String
+    insert(pos, str, substr, sublen)
+===========================================================
+STL
+
+
+===========================================================
+Algorithms
+    std::accumulate(first, last, init_value, operator);
+        int sum     = std::accumulate(v.begin(), v.end(), 0);
+        int product = std::accumulate(v.begin(), v.end(), 1, std::multiplies<int>());
+
+===========================================================
 Trie
     Trie is an efficient information reTrieval data structure.
     M*logN, M = max length of string, N = number of keys
@@ -59,4 +72,16 @@ Happy number:
 Palindrome
     string that reads same fwd and backwrd
     use two pointers, start and end 
+
+
+GCD / LCM : LCM(a,b) = a*b/GCD(a,b)    
+GCD of array: for(i = 1 .. N) result = gcd(arr[i], result);
+
+Binomial coefficient
+C(n, k) = C(n-1, k-1) + C(n-1, k)
+C(n, 0) = C(n, n) = 1
+
+
+Warmup questions:
+1. string to number: loop over chars, check if char in set{0,1,...9}, start from right, then add power of 10 
 

@@ -4,10 +4,6 @@
 #include "Array.h"
 using namespace std;
 
-MinHeap::MinHeap()
-{
-    ;
-}
 MinHeap::~MinHeap(){
     ;
 }
@@ -20,6 +16,16 @@ MinHeap::~MinHeap(){
 }*/
 
 void MinHeap::Run(){
+    cout << "Run: MinHeap example "<< endl;
+    MinHeap heap(10);
+    heap.insertKey(1);
+    heap.insertKey(2);
+    heap.insertKey(3);
+    heap.insertKey(4);
+    heap.insertKey(3);
+    heap.print();
+
+    
     /*MinHeap h(11); 
     h.insertKey(3); 
     h.insertKey(2); 

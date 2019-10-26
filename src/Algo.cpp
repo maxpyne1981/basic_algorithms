@@ -153,8 +153,16 @@ void Algo::Run(){
     /*string str = "0ABCDCBA";
     cout <<"Is "<< str << " a palindrome  "<< IsPalindrome(str) << endl ;*/
     
-    int num = 12345;
-    cout<< "FindSquaredSumOfDigits " << num <<" is "<< FindSquaredSumOfDigits(num) << endl;
+    //int num = 12345;
+    //cout<< "FindSquaredSumOfDigits " << num <<" is "<< FindSquaredSumOfDigits(num) << endl;
+
+
+
+    int a = 25, b = 35;
+    cout << "GCD of "<< a <<", "<< b << " is "<< GCD(a, b) << endl;
+
+    int n = 6, k = 3;
+    cout << "Binomial coeff "<< n <<", "<< k << " is "<< binomial(n, k) << endl;
 }
 
 

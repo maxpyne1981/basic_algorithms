@@ -8,6 +8,7 @@
 #include "Graph.h" 
 #include "Algo.h" 
 #include "Trie.h" 
+#include "Heap.h" 
 int main(){
 
     // linked list
@@ -32,14 +33,14 @@ int main(){
 
     //BST::Run();
 
-    //Graph graph;
-    //graph.Run();
+    //Graph::Run(); 
 
     //Algo algo;
     //algo.Run();
 
+    //Trie::Run();
 
-    Trie::Run();
+    MinHeap::Run();
 
     return 0;
 }
