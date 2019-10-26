@@ -17,6 +17,11 @@ public:
         data = std::vector<int>(capacity, 0);
         std::cout << "a min heap is created with capacity "<< capacity << std::endl;
     }
+        while(i!=0 && data[parent(i)] > data[i]){
+            swap(&data[i], &data[parent(i)]); 
+            i = parent(i);
+        }
+    }
 
 
     int parent(int i)   {return (i-1)/2;}
@@ -31,11 +36,7 @@ public:
         int i = heap_size -1;
         data[i] = key;
 
-
-        while(i!=0 && data[parent(i)] > data[i]){
-            swap(&data[i], &data[parent(i)]); 
-            i = parent(i);
-        }
+        HeapifyUp(i);
     }
 
     int extractMin(){
@@ -46,14 +47,22 @@ public:
             return data[0];
         }
 
+        // extract from top, 
+        // move last value to the top, 
+        // then continue heapify
         int root = data[0];
         data[0] = data[heap_size-1];
         heap_size--;
-        MinHeapify(0);
+        HeapifyDown(0);
         return  root;
     }
 
-    void MinHeapify(int i){
+
+    /* starting from the root, 
+    find index of the smallest child, 
+    if the smallest child is smaller than parent, then swap and continue
+    */
+    void HeapifyDown(int i){
         int l = left(i);
         int r = right(i);
         int smallest = i;
@@ -64,7 +73,7 @@ public:
         if (smallest != i) 
         { 
             swap(&data[i], &data[smallest]); 
-            MinHeapify(smallest); 
+            HeapifyDown(smallest); 
         }     
     }
 
@@ -74,7 +83,27 @@ public:
         std::cout << std::endl;    
     }
 
-    
+    // This function deletes key at index i. It first reduced value to minus
+    // infinite, then calls extractMin()
+    void deleteKey(int i)
+    {
+        decreaseKey(i, -1);
+        extractMin();
+    }
+
+
+  
+    // Decreases value of key at index 'i' to new_val.  It is assumed that 
+    // new_val is smaller than data[i]. 
+    void decreaseKey(int i, int new_val){
+        data[i] = new_val; 
+        while (i != 0 && data[parent(i)] > data[i]) 
+        { 
+            swap(&data[i], &data[parent(i)]); 
+            i = parent(i); 
+        }  
+
+    }
 
 
     ~MinHeap();
