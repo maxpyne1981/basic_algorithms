@@ -17,8 +17,12 @@ public:
         data = std::vector<int>(capacity, 0);
         std::cout << "a min heap is created with capacity "<< capacity << std::endl;
     }
-        while(i!=0 && data[parent(i)] > data[i]){
-            swap(&data[i], &data[parent(i)]); 
+
+    void HeapifyUp(int i){
+        // Fix the min heap property if it is violated
+        while (i != 0 && data[parent(i)] > data[i])
+        {
+            swap(&data[i], &data[parent(i)]);
             i = parent(i);
         }
     }
