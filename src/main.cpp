@@ -28,8 +28,8 @@ int main(){
     //Bits bits;
     //bits.Run();
 
-    //Sort sort;
-    //sort.Run();
+    Sort sort;
+    sort.Run();
 
     //BST::Run();
 
@@ -40,7 +40,16 @@ int main(){
 
     //Trie::Run();
 
-    MinHeap::Run();
+    //MinHeap::Run();
+
+    //Sudoku sudoku;
+    //sudoku.Run();
+
+    //KSRecursive ks;
+    //ks.Run();
+
+    //Steps st;
+    //st.Run();
 
     return 0;
 }

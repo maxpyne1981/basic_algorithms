@@ -171,6 +171,25 @@ void mergeSort(int arr[], int l, int r)
         merge(arr, l, m, r); 
     } 
 }
+/////////////////////////////////////////
+//////////// Insertion sort /////////////
+/////////////////////////////////////////
+void Sort::InsersionSort(int arr[], int n){
+    cout << "applying insertion sort "<< endl;
+
+    int i,j;
+    int key;
+
+    for(i=1; i<n; i++){
+        key = arr[i];   // take an element from 1 to n-1
+        j=i-1;          // start the 2nd loop from left of i,
+        while(j>=0 && arr[j] > key){ // move left with index j
+            arr[j+1] = arr[j];
+            j = j-1;
+        }
+        arr[j+1]=key;
+    }
+}
 
 /////////////////////////////////////////
 //////////// Merge sort /////////////////
@@ -186,7 +205,8 @@ void Sort::Run(){
     //QuickSort(arr, 0, n);
     //mergeSort(arr, 0, n-1);
     //BubbleSort(arr, n);
-    BubbleSort_Recursive(arr, n);
+    //BubbleSort_Recursive(arr, n);
+    InsersionSort(arr, n);
     cout <<"sorted array array"<< endl;
     Array::print_array(arr, n);
 }
