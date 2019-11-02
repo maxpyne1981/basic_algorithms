@@ -39,6 +39,37 @@ set (unordered_set)
 '''
 * set is a balanced tree O(log n)
 * unordered_set is a hash table O(1)
+* set<int> s(v.begin(), v.end()); // construct set from vector
+
+map
+'''
+    empty()
+    size()
+    insert(std::pair<>)
+    find()
+    clear()
+    emplate()
+    count()
+    *it.first, *it.second or it->first, it->second
+    erase(key)
+'''
+
+vector
+'''
+    vector<int> v
+    vector<int> v(n, val)
+    vector<int> v(v1.begin(), v1.end())
+'''
+priority_queue<int>, container adapter
+'''
+    priority_queue<int> maxHeap;                             // containing first half of numbers
+    priority_queue<int, vector<int>, greater<int>> minHeap;  // containing second half of numbers
+    empty()
+    size()
+    push()
+    pop()
+    
+'''
 
 ===========================================================
 String
@@ -81,7 +112,32 @@ Binomial coefficient
 C(n, k) = C(n-1, k-1) + C(n-1, k)
 C(n, 0) = C(n, n) = 1
 
+Median of a series of number: insert(), findMedian()
+    create two heaps, 
+    push data into a heap, 
+    rebalance,
+    return average of the top of two heaps, 
+
+
+
+Time complexity:
+Heap
+    - insertion: O(logN)
+
+Binary search
+    - search O(logN)
 
 Warmup questions:
 1. string to number: loop over chars, check if char in set{0,1,...9}, start from right, then add power of 10 
+
+
+
+Syntax used for capturing variables :
+      [&] : capture all external variable by reference
+      [=] : capture all external variable by value
+      [a, &b] : capture a by value and b by reference
+
+A lambda with empty capture clause [ ] can access only those variable which are local to it.
+Capturing ways are demonstrated below :
+
 
