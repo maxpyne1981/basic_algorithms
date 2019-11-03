@@ -71,12 +71,33 @@ priority_queue<int>, container adapter
     
 '''
 
-===========================================================
 String
+'''
     insert(pos, str, substr, sublen)
-===========================================================
-STL
+'''
 
+Time complexity:
+'''
+Heap
+    - insertion: O(logK)
+    - retrieve smallest / largest element O(1)
+
+Binary search
+    - search O(logN)
+    
+Array  / linked list
+    - insert O(1)
+    - search O(N)
+    - remove O(N)
+    
+Sorted array
+    - search O(logN)
+    
+Binary search tree
+    - insert O(logN)
+    - search O(logN)
+    - remove O(logN)    
+'''
 
 ===========================================================
 Algorithms
@@ -117,15 +138,10 @@ Median of a series of number: insert(), findMedian()
     push data into a heap, 
     rebalance,
     return average of the top of two heaps, 
+    
+Greedy algoritms
+    at each step, small local optical choice ir order to get a global optimal solution
 
-
-
-Time complexity:
-Heap
-    - insertion: O(logN)
-
-Binary search
-    - search O(logN)
 
 Warmup questions:
 1. string to number: loop over chars, check if char in set{0,1,...9}, start from right, then add power of 10 
