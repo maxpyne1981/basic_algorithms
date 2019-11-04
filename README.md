@@ -71,9 +71,38 @@ priority_queue<int>, container adapter
     
 '''
 
-String
+Array
 '''
+    int foo[] = { 10, 20, 30 };
+    int foo[5];   
+    int jimmy [HEIGHT][WIDTH];
+        int n,m;
+
+        int main ()
+        {
+        for (n=0; n<HEIGHT; n++)
+            for (m=0; m<WIDTH; m++)
+                jimmy[n][m]=(n+1)*(m+1);
+        }
+        
+    function: void printarray (int arg[], int length)
+    
+    char myword[] = { 'H', 'e', 'l', 'l', 'o', '\0' };
+    char myword[] = "Hello"; 
+    
+'''
+
+String
+''' 
+    stoi()
+    stol() etc
     insert(pos, str, substr, sublen)
+    size(), length()
+    front(), back(), 
+    at[], operator[]
+    str.erase (str.begin()+9); 
+    swap()
+    empty(), clear()
 '''
 
 Time complexity:
@@ -124,6 +153,13 @@ Happy number:
 Palindrome
     string that reads same fwd and backwrd
     use two pointers, start and end 
+   
+Anagram 
+    two strings whose characters are jumbled up, 
+    use sorting or hash table to find out if two string has same number of characters, 
+
+Strobogrammatic number
+    is a number that looks the same when rotated 180 degrees (looked at upside down).
 
 
 GCD / LCM : LCM(a,b) = a*b/GCD(a,b)    
