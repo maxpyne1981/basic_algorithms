@@ -133,6 +133,14 @@ Algorithms
     std::accumulate(first, last, init_value, operator);
         int sum     = std::accumulate(v.begin(), v.end(), 0);
         int product = std::accumulate(v.begin(), v.end(), 1, std::multiplies<int>());
+Sort
+    O(nlogn)- quicksort, merge sort
+    O(n^2) - selction sort, insertion sort, bubble sort, , space O(1)
+    QuickSort
+        - pick a pivot, at end, pivot is at the rightplace, left all smaller, right all larger, 
+        - time O(nlogn), space O(1)
+    BubbleSort
+        - push largest elemnt to the right
 
 ===========================================================
 Trie
