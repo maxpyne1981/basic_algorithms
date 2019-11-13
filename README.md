@@ -227,7 +227,19 @@ Advance CPP
     std::swap               : swaps value of two objets using std::move semantics
     std::bind, function     : create new function object and bind them to a variable, 
     std::pair               : pp.first, pp.second, or std::get<0>(pp), std::get<1>(pp)
-    std::tuple
+    std::tuple              :
+    
+    <memory> smart ptrs RAII    Resource acquisition is initialization
+    unique_ptr<>            : exclusive ownership
+    shared_ptr<>            : shared ownership, reference counting, 
+    weak_ptr<>              : temporary ownership, 
+    
+    unique_ptr
+        std::unique_ptr<int> up1(new int(2011));
+        //std::unique_ptr<int> up2 = up1;            // ERROR
+        std::unique_ptr<int> up3 = std::move(up1); // OK
+    
+    
         
    directive    using namespace std;
    declaration  using std::cout;
