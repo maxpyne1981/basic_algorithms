@@ -103,6 +103,7 @@ String
     str.erase (str.begin()+9); 
     swap()
     empty(), clear()
+    str.find_first_not_of(' ');
 '''
 
 Time complexity:
@@ -192,6 +193,8 @@ Warmup questions:
 
 
 
+
+
 Syntax used for capturing variables :
       [&] : capture all external variable by reference
       [=] : capture all external variable by value
@@ -201,3 +204,39 @@ A lambda with empty capture clause [ ] can access only those variable which are 
 Capturing ways are demonstrated below :
 
 
+CS Basics
+    OOP
+        The basic OOPS principle are as follows,
+        Encapsulation
+        Abstraction
+        Inheritance
+        Polymorphism
+        
+Advance CPP
+    STL: container + iterator + algorithms, 
+    sequential container    : vector, array, list
+    associative container   : set, map, multimap
+    container adapter       : stack, queue, priority_queue
+    operators               : extraction >>, insertion << 
+    stream                  : stringstream, fstream, 
+    threading               : atomic, thread, lock, condition
+    preprocessor            : include
+    namespace alias         : namespace sysClock= std::chrono::system_clock;
+    std::move               : moves data to a new object, faster, cheaper, source goes back to default state
+    std::forward            : forward arg in generic templated function (?)
+    std::swap               : swaps value of two objets using std::move semantics
+    std::bind, function     : create new function object and bind them to a variable, 
+    std::pair               : pp.first, pp.second, or std::get<0>(pp), std::get<1>(pp)
+    std::tuple
+        
+   directive    using namespace std;
+   declaration  using std::cout;
+   
+   new containers:  std::array, std::tuple, 
+   libraries:       regex, multithreading
+   cpp11:           algo, multithreading, smart pointers
+   cpp14:           tuple, 
+   cpp17:           std::any, std::optional, std::variant
+   
+   
+   
