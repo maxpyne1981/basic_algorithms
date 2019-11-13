@@ -9,7 +9,23 @@
 #include "Algo.h" 
 #include "Trie.h" 
 #include "Heap.h" 
+
+
+#include <utility>
+void move_semantics(){
+    std::vector<int> myBigVec(10000000, 2011);
+    std::vector<int> myVec;
+
+    std::cout << "size before move: source "<< myBigVec.size() <<", dest "<< myVec.size()<<std::endl;
+    //myVec = myBigVec;             // copy semantic
+    myVec = std::move(myBigVec);  // move semantic
+    std::cout << "size after move: source "<< myBigVec.size() <<", dest "<< myVec.size()<<std::endl;
+}
+
+
 int main(){
+
+    move_semantics();
 
     // linked list
     //LinkedList linkedlist;
@@ -28,8 +44,8 @@ int main(){
     //Bits bits;
     //bits.Run();
 
-    Sort sort;
-    sort.Run();
+    //Sort sort;
+    //sort.Run();
 
     //BST::Run();
 

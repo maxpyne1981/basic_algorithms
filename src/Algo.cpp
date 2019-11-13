@@ -163,6 +163,8 @@ void Algo::Run(){
 
     int n = 6, k = 3;
     cout << "Binomial coeff "<< n <<", "<< k << " is "<< binomial(n, k) << endl;
+
+    Permute_phNo();
 }
 
 

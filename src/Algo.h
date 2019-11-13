@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
 #include <math.h>
+#include <map>
+#include <algorithm>
+using namespace std;
 class Algo{
 public:
     Algo();
@@ -49,12 +52,107 @@ public:
         return binomial(n-1, k-1) + binomial(n-1, k);
     }
 
+    
+    // daily coding, find perm of phone no.
+    void Permute_phNo(){
+        map<char, vector<char>> map;
+        map['1'] = vector<char>{'a', 'b', 'c'};
+        map['2'] = vector<char>{'d', 'e', 'f'};
+        map['3'] = vector<char>{'i', 'j', 'k'};
+
+        string ss("123");
+        vector<string> res, tmpres;
+        for(int i=0; i<(int)ss.length();i++){
+            char c = ss[i];
+            vector<char> cc = map[c];
+
+            // result is empty
+            if(res.empty()) {
+                for(auto achar : cc)
+                    res.push_back(string(1, achar));
+                continue;
+            }else{
+                for(auto achar : cc)
+                    for(auto r : res)
+                        tmpres.push_back(string(r) + string(1, achar));
+                    
+                res = tmpres;
+                tmpres.clear();
+            }
+        }
+        cout << "Number of permutations "<< res.size() << endl;
+        for(auto s : res) cout << s  << ", ";
+        cout << endl;
+
+    }
+
+    // merge intervals problem
+    // basically, idea is to merge all intervals and count
+    int MergeIntervals(vector<vector<int>>& intervals) {
+        if(intervals.empty()) return 0;
+        sort(intervals.begin(), intervals.end(),
+                [](vector<int>& a, vector<int>& b){
+                return a.size() < b.size();
+                });
+
+        vector<vector<int>> mi; // merged intervals
+        for(int i=0; i<intervals.size()-1; i++){
+            if(mi.empty()){
+                mi.push_back(intervals[i]);
+                continue;
+            }else{
+                // merge
+                vector<int>& last = mi.back();
+                vector<int> current = intervals[i];
+
+                if(last.size()!=2) continue;
+                if(current.size()!=2) continue;
+                int lastEnd = last[1];
+                int currentStart = current[0];
+                int currentEnd   = current[1];
+                if(currentStart > lastEnd){
+                    mi.push_back(current);
+                    continue;
+                }else{
+                    if(currentEnd > lastEnd)
+                        last[1] = currentEnd;
+                }
+
+            }
+
+        }
+        for(auto a : mi){
+            for(auto b : a){
+                cout << b << ", ";
+            }
+            cout << endl;
+        }
+
+        return mi.size();
+    }
+    // keeps only alpha numeric value
+    string sanitize(string s){
+        string res;
+        for( char c : s){
+            if(c>='a' && c <='z'){
+                res += string(1, c);
+            }
+            if(c>='A' && c <='Z'){
+                res += string(1, c - 'A' + 'a');
+            }
+            if(c>='0' && c <='9'){
+                res += string(1, c);
+            }
+        }
+        return res;
+    }
+
+
+
     void Run();
 private:
     bool IsPalindrome(std::string str);
     int FindSquaredSumOfDigits(int num);
-
-
 
 };
 
