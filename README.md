@@ -239,7 +239,16 @@ Advance CPP
         //std::unique_ptr<int> up2 = up1;            // ERROR
         std::unique_ptr<int> up3 = std::move(up1); // OK
     
-    
+   std::copy(std::find(vec.begin(), vec.end(), 13), vec.end(), std::back_inserter(deq)); 
+   
+   Callables:
+        functions foo
+        function objects foo()
+        lambdas
+        
+    algorithms:
+        execution policy: std::execution::seq, par, par_unseq c++17
+        
         
    directive    using namespace std;
    declaration  using std::cout;
