@@ -259,5 +259,8 @@ Advance CPP
    cpp14:           tuple, 
    cpp17:           std::any, std::optional, std::variant
    
-   
+   iterator with std::advance(it, n)
+       auto it = data.begin();
+       std::advance(it , n);
+ 
    
