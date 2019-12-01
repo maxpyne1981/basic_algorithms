@@ -192,6 +192,9 @@ Warmup questions:
 1. string to number: loop over chars, check if char in set{0,1,...9}, start from right, then add power of 10 
 
 
+Types of problems
+    Find top K elements: use Heap/ priority queue
+    Find top K frequent elemennt: use haspmap to find freq and priority queue to find top K,
 
 
 
@@ -288,3 +291,28 @@ Stack Allocation : The allocation happens on contiguous blocks of memory. We cal
 Heap Allocation : The memory is allocated during execution of instructions written by programmers. Note that the name heap has nothing to do with heap data structure. It is called heap because it is a pile of memory space available to programmers to allocated and de-allocate. If a programmer does not handle this memory well, memory leak can happen in the program.
 
 
+template
+template<typename T> void print_queue(T& q) {
+    while(!q.empty()) {
+        std::cout << q.top() << " ";
+        q.pop();
+    }
+    std::cout << '\n';
+}
+ 
+ 
+ // how to use heap
+vector<int> minHeap(nums.begin(), nums.begin() + k);
+make_heap(minHeap.begin(), minHeap.end(), greater());
+pop_heap(minHeap.begin(), minHeap.end(), greater());
+minHeap.pop_back();
+minHeap.push_back(nums[i]);
+push_heap(minHeap.begin(), minHeap.end(), greater());
+    
+// how to use priority_queue
+struct valueCompare {
+    char operator()(const pair<int, int> &x, const pair<int, int> &y) {
+      return x.second > y.second;
+    }
+  };
+priority_queue<pair<int, int>, vector<pair<int, int>>, valueCompare> minHeap;
