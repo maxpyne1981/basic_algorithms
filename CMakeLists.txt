@@ -29,6 +29,7 @@ set(SOURCES
     src/Algo.cpp
     src/Heap.cpp
     src/Trie.cpp
+    src/Problems.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/src/) 

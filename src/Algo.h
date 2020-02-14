@@ -96,7 +96,7 @@ public:
                 });
 
         vector<vector<int>> mi; // merged intervals
-        for(int i=0; i<intervals.size()-1; i++){
+        for(int i=0; i<(int)intervals.size()-1; i++){
             if(mi.empty()){
                 mi.push_back(intervals[i]);
                 continue;

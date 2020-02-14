@@ -233,14 +233,16 @@ Advance CPP
     std::tuple              :
     
     <memory> smart ptrs RAII    Resource acquisition is initialization
-    unique_ptr<>            : exclusive ownership
-    shared_ptr<>            : shared ownership, reference counting, 
-    weak_ptr<>              : temporary ownership, 
+    unique_ptr<>            : exclusive ownership, get, release, reset, swap, get_deleter
+    shared_ptr<>            : shared ownership, reference counting, atomic, large overhead, get, release, swap, unique,
+                              use_count, get_deleter
+    weak_ptr<>              : temporary ownership, expired, lock, reset, swap,  
     
     unique_ptr
         std::unique_ptr<int> up1(new int(2011));
         //std::unique_ptr<int> up2 = up1;            // ERROR
         std::unique_ptr<int> up3 = std::move(up1); // OK
+        std::unique_ptr<int> up = std::make_unique<int>(2014)
     
    std::copy(std::find(vec.begin(), vec.end(), 13), vec.end(), std::back_inserter(deq)); 
    
@@ -252,6 +254,20 @@ Advance CPP
     algorithms:
         execution policy: std::execution::seq, par, par_unseq c++17
         
+    shared_ptr
+        uses atomic call to reference counter, hence more overhead,
+        auto sharPtr= std::make_shared<SharedInt>(1998);
+
+    weak_ptr
+        breaks cycle of shared_ptr
+
+
+    Time library            : Time point, duration, clock
+
+    std::any                : type safe container for any variable that is copy contructible, any_cast<type>(),  anyVec[0].type().name() 
+    std::optional           : safely return default is quiry fails
+    std::variant            :          
+
         
    directive    using namespace std;
    declaration  using std::cout;

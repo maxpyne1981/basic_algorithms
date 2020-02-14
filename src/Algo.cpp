@@ -18,7 +18,7 @@ Algo::~Algo(){
 // assumptions that all chars in the string represent digits
 #define max(a,b) ((a) > (b) ? (a) : (b))
 string add(string lhs, string rhs) {
-    int length = max(lhs.size(), rhs.size());
+    size_t length = max(lhs.size(), rhs.size());
     int carry = 0;
     int sum_col;  // sum of two digits in the same column
     string result;
@@ -45,7 +45,7 @@ string add(string lhs, string rhs) {
 }
 
 string subtract(string lhs, string rhs) {
-    int length = max(lhs.size(), rhs.size());
+    size_t length = max(lhs.size(), rhs.size());
     int diff;
     string result;
 
@@ -86,7 +86,7 @@ X*Y = (a+b)*(c+d)
 
 */
 string multiply(string lhs, string rhs) {
-    int length = max(lhs.size(), rhs.size());
+    size_t length = max(lhs.size(), rhs.size());
     
     while (lhs.size() < length) 
       lhs.insert(0,"0");
@@ -107,9 +107,9 @@ string multiply(string lhs, string rhs) {
     string p2 = multiply(add(lhs0,lhs1),add(rhs0,rhs1));
     string p3 = subtract(p2,add(p0,p1));
 
-    for (int i = 0; i < 2*(length-length/2); i++)
+    for (size_t i = 0; i < 2*(length-length/2); i++)
         p0.append("0");
-    for (int i = 0; i < length-length/2; i++)
+    for (size_t i = 0; i < length-length/2; i++)
         p3.append("0");
         
     string result = add(add(p0,p1),p3);
