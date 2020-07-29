@@ -332,3 +332,12 @@ struct valueCompare {
     }
   };
 priority_queue<pair<int, int>, vector<pair<int, int>>, valueCompare> minHeap;
+
+
+
+
+// how to copy data from one container to another
+std::set<string> output;
+std::vector<string> result;   
+result.resize(output.size());
+std::copy(output.begin(), output.end(), result.begin());
