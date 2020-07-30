@@ -11,4 +11,4 @@
 - openconnect: parners with ISP to setup OpenConnect to cache frequent data into local servers, reducing traffic, 
 - data from origianl server is copied over to openconnect (write operation) when network load is low, 
 - ref [video](https://www.youtube.com/watch?v=x9Hrn0oNmJM) 
-
+- ref [blog](http://highscalability.squarespace.com/blog/2017/12/11/netflix-what-happens-when-you-press-play.html)
