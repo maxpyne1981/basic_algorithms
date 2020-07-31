@@ -3,7 +3,7 @@
 - microservice architecture: decoupled system, difficult to design, easy to make modifications and deploy, 
 
 
-# netflix 
+### netflix 
 - stat: 110mil subscribers, 220 countries, 3B revenue/quarter, 250mil hrs of vide / day, 1B hrs video / week, 37% of peak US traffic, 
 - client, backend, CDN ( content delivery network )
 - stores videos as multiple format + multiple resolution, 
@@ -21,5 +21,5 @@
 - ref [blog](http://highscalability.squarespace.com/blog/2017/12/11/netflix-what-happens-when-you-press-play.html)
 
 
-# AWS
+### AWS
 - EC2 scalable computing, S3 scalable storage, 
