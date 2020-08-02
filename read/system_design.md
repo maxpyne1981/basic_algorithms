@@ -23,3 +23,48 @@
 
 ### AWS
 - EC2 scalable computing, S3 scalable storage, 
+
+
+
+### Twitter
+- Frontend: Ruby on rails for; Scala/Java: Backend
+- Apache Thrift (Facebook) to communicate between different services, 
+- MySql + FlockDB, Cassandra: storage + relationships; 
+- Memcache: for caching data
+- tweet, timeline , trend
+- 1/1000 write vs read, 
+- 140 chars
+- Fanout: when someone tweets, the info is added to followers' timeline as well, 
+- Celebrity tweets are pulled in at the final query time by end user.
+- rate of a hashtag creates trend, 
+- Trend: Apache strom / Heron, Kafka stream, Stream -> Filter -> Parse -> GeoTag -> window -> rank, 
+- Filter trivial operators out, 
+- Find how many hashtags within a time windows,
+- Search timeline: Early bird -> parsed and categorized, scatter + gather 
+- services: write, timeline, kafka stream trending, early bord for searching, 
+- zookeper: maintains redis on cluster,
+- gyzmoduck, tweetypie, 
+- ref [video](https://www.youtube.com/watch?v=wYk0xPP_P_8&t=16s)
+- ref [diagram](https://imgur.com/6TFkVL2)
+
+### Facebook
+
+### Tiny URL
+
+### Storage
+- REDIS DB, in memory database,
+
+
+### REDIS
+- redis lab
+- in memory distributed data structure / data base solution / used for large volume of data caching, 
+- fast, modular, 
+- written in C, super fast, 
+- list, set, map etc
+
+
+
+
+### Ruby on rails
+- started in 2003
+- MVC; Convention over configuration; DRY (Dont repeat yourself)
