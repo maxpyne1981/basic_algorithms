@@ -1,6 +1,6 @@
 # C++ notes
 
-algorithms
+## algorithms
 - std::for_each(v.begin(), v.end(), lambda_fn);
 - std::sort(container.begin(), container.end(), lambda_fn);
 - std::reverse(container.begin(), container.end());
@@ -10,7 +10,7 @@ algorithms
 - std::copy(from_vector.begin(), from_vector.end(), std::back_inserter(to_vector));
 
 
-# lambda functions
+## lambda functions
 ```
 [ capture clause ] (parameters) -> return-type  
 {   
@@ -22,7 +22,7 @@ sort(v.begin(), v.end(), [](const int& a, const int& b) -> bool
         return a > b; 
     }); 
 ```
-## Syntax
+### Syntax
       - [&] : capture all external variable by reference;
       - [=] : capture all external variable by value;
       - [a, &b] : capture a by value and b by reference;
