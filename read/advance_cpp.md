@@ -27,3 +27,9 @@ sort(v.begin(), v.end(), [](const int& a, const int& b) -> bool
       - [=] : capture all external variable by value;
       - [a, &b] : capture a by value and b by reference;
       - A lambda with empty capture clause [ ] can access only those variable which are local to it;
+
+## std::string
+   - std::to_string(int) # int to string
+   
+## algoritms
+   - std::next_permutation(A.begin(), A.end()) # rearranges data in lexicographical order
