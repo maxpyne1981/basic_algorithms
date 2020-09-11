@@ -13,6 +13,9 @@
 - int product = std::accumulate(v.begin(), v.end(), 1, std::multiplies<int>());
 - std::next_permutation(A.begin(), A.end()) # rearranges data in lexicographical order
 - std::copy(std::find(vec.begin(), vec.end(), 13), vec.end(), std::back_inserter(deq)); 
+   
+- binary_search(vec.begin(), vec.end(), value);
+- all_of(vec.begin(), vec.end(), lambda); # returns true is all elements satisfies condition, 
 
 ## lambda functions
 ```
@@ -37,6 +40,11 @@ sort(v.begin(), v.end(), [](const int& a, const int& b) -> bool
    - std::to_string(int) # int to string
    
 ## containers
+
+### stack and queue
+- container adapter
+- default: uses deque as underlying container, 
+- you can use any container
 
 ### std::stack
     - constructor
