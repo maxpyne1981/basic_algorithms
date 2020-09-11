@@ -13,9 +13,33 @@
 - int product = std::accumulate(v.begin(), v.end(), 1, std::multiplies<int>());
 - std::next_permutation(A.begin(), A.end()) # rearranges data in lexicographical order
 - std::copy(std::find(vec.begin(), vec.end(), 13), vec.end(), std::back_inserter(deq)); 
+
+
+### search algos
+- binary_search(vec.begin(), vec.end(), value); # return true / false
+- auto it = std::find(vec.begin(), vec.end(), value); ;
+- find_if(vec.begin(), vec.end(), predicate/lambda); # find first ocurrance
+- find_if_not(vec.begin(), vec.end(), predicate/lambda); # find first ocurrance
+- search(big.begin(), big.end(), small.begin(), small.end()); # search small container within the big container, 
+
+### count algos
+- int n = count(vec.begin(), vec.end(), value); 
+- int n = count_if(vec.begin(), vec.end(), predicate/lambda); 
+
+### replace / remove algos
+- replace(vec.begin(), vec.end(), fromValue, toValue); 
+- replace_if(vec.begin(), vec.end(), is_even<int>, 99); 
+- auto it  = remove(vec.begin(), vec.end(), valueToRemove); # use iterator to resize vector
+- auto it = remove_if(vec.begin(), vec.end(), is_even<int>, 99);
+- auto it = unique(vec.begin(), vec.end());   
    
-- binary_search(vec.begin(), vec.end(), value);
+
+### range based algos
 - all_of(vec.begin(), vec.end(), lambda); # returns true is all elements satisfies condition, 
+- any_of(vec.begin(), vec.end(), lambda);
+- none_of(vec.begin(), vec.end(), lambda);
+- all_of(vec.begin(), vec.end(), lambda);
+
 
 ## lambda functions
 ```
