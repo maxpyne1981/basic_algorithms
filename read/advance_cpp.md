@@ -33,6 +33,36 @@
 - auto it = remove_if(vec.begin(), vec.end(), is_even<int>, 99);
 - auto it = unique(vec.begin(), vec.end());   
    
+### modification algorithm
+- copy(src.begin(), src.end(), dest.begin());
+- copy_n(src.begin(), nItemsToCopy, dest.begin());
+- copy_backwards(src.begin(), src.end(), dest.end()); # algo copies from end to start, result same as copy
+
+- reverse_copy(src.begin(), src.end(), dest.begin()); # copies reverse
+- reverse(src.begin(), src.end()); # reverses data, uses swap
+
+- fill(src.begin(), src.end()-10, 100); # fills with 100
+- fill(src.begin(), src.end()-10, 100); # fills with 100
+- generate(v,begin(), v,end(), []()->int {return rand() % 100;});
+
+- random_shuffle(v,begin(), v,end(), []()->int {return rand() % 100;}); # C++17 depricated
+- random_shuffle(v,begin(), v,end());
+
+- partition(v.begin(), v.end(), predicate/lambda); # true elemenets moved to front 
+- stable_partition(v.begin(), v.end(), predicate/lambda); # true elemenets moved to front in order, slower
+- partition_copy(src.begin(), src.end(), partition1.begin(), partition2.begin(), predicate/lambda); # partition then  copies, make use to resize dest vectors
+
+### sorting
+- sort(v.begin(), v.end(), comp / lambda);
+- bool b = is_sorted(v.begin(), v.end());
+
+### merge
+- merge(src1.begin(), src1.end(), src2.begin(), src2.end(), dest.begin()); # src1, src2 needs to be sorted, dest will also be sorted
+
+
+
+
+   
 
 ### range based algos
 - all_of(vec.begin(), vec.end(), lambda); # returns true is all elements satisfies condition, 
