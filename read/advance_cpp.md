@@ -17,6 +17,9 @@
 
 ### search algos
 - binary_search(vec.begin(), vec.end(), value); # return true / false
+- auto it = lower_bound(vec.begin(), vec.end(), value); # first ocurrance 
+- auto it = upper_bound(vec.begin(), vec.end(), value); # one past last ocurrance
+- auto pp = equal_range(vec.begin(), vec.end(), value); # both upper and lower bound, 
 - auto it = std::find(vec.begin(), vec.end(), value); ;
 - find_if(vec.begin(), vec.end(), predicate/lambda); # find first ocurrance
 - find_if_not(vec.begin(), vec.end(), predicate/lambda); # find first ocurrance
