@@ -1,5 +1,11 @@
 # C++ notes
 
+### oop
+
+### advanced topics in C++
+- base class ptr calls base class method, unless declared virtual,
+- if you have a virtual function, add a virtual d'tor
+
 ## algorithms
 - std::for_each(v.begin(), v.end(), lambda_fn);
 - std::sort(container.begin(), container.end(), lambda_fn);
@@ -214,6 +220,9 @@ sort(v.begin(), v.end(), [](const int& a, const int& b) -> bool
     std::unique_ptr<int> up1(new int(2011));
     //std::unique_ptr<int> up2 = up1;            // ERROR
     std::unique_ptr<int> up3 = std::move(up1); // OK
+   up3.reset()
+   up3.reset(new int(1234));
+   up3.release(); only releases from managed memory, 
     std::unique_ptr<int> up = std::make_unique<int>(2014)
 - shared_ptr
     uses atomic call to reference counter, hence more overhead,
