@@ -6,6 +6,10 @@
 - base class ptr calls base class method, unless declared virtual,
 - if you have a virtual function, add a virtual d'tor
 
+## library methods
+- std::numeric_limits<double>::max() //  #include <limits>
+- std::numeric_limits<double>::min() //  #include <limits>
+
 ## algorithms
 - std::for_each(v.begin(), v.end(), lambda_fn);
 - std::sort(container.begin(), container.end(), lambda_fn);
@@ -15,7 +19,7 @@
 - auto last = std::unique(v.begin(), v.end()); v.erase(last, v.end());
 - std::copy(from_vector.begin(), from_vector.end(), std::back_inserter(to_vector));
 - std::accumulate(first, last, init_value, operator);
-- int sum     = std::accumulate(v.begin(), v.end(), 0);
+- int sum     = std::accumulate(v.begin(), v.end(), 0);                          # use this for an array sum etc
 - int product = std::accumulate(v.begin(), v.end(), 1, std::multiplies<int>());
 - std::next_permutation(A.begin(), A.end()) # rearranges data in lexicographical order
 - std::copy(std::find(vec.begin(), vec.end(), 13), vec.end(), std::back_inserter(deq)); 
