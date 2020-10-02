@@ -6,11 +6,11 @@
 - base class ptr calls base class method, unless declared virtual,
 - if you have a virtual function, add a virtual d'tor
 
-## library methods
+### library methods
 - std::numeric_limits<double>::max() //  #include <limits>
 - std::numeric_limits<double>::min() //  #include <limits>
 
-## algorithms
+### algorithms
 - std::for_each(v.begin(), v.end(), lambda_fn);
 - std::sort(container.begin(), container.end(), lambda_fn);
 - std::reverse(container.begin(), container.end());
@@ -84,7 +84,7 @@
 - all_of(vec.begin(), vec.end(), lambda);
 
 
-## lambda functions
+### lambda functions
 ```
 [ capture clause ] (parameters) -> return-type  
 {   
@@ -105,8 +105,16 @@ sort(v.begin(), v.end(), [](const int& a, const int& b) -> bool
 
 ### std::string
    - std::to_string(int) # int to string
+   - toupper(char)  returns the uppercase of arg sent toupper('a'); -> 'A'
+   - tolower(char)  similar
+   - isupper(char)  returns bool: true if uppercase isupper('a'); -> false
+   - islower(char)  similar
+   - isalpha(char)  similar
+   - isdigit(char)  similar
+   - ispunct(char)  returns bool: true if punctuation ispunct('!'); -> true
+   - isspace(char)  returns bool: true if whitespace – space, newline, tab
    
-## containers
+### containers
 
 ### stack and queue
 - container adapter
