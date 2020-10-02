@@ -51,9 +51,13 @@
 
 ### Find top K elements
     - use Heap/ priority queue
+    
 ### Find top K frequent elemennt
     - use haspmap to find freq and priority queue to find top K,
 
+### breadth first search
+  - add staring node to a queue, 
+  - go through the queue until empty, process each children and add them to the queue, 
 
 
 ### study materials
