@@ -1,0 +1,7 @@
+- collection of small tests,
+- each file will compile by itself, 
+
+
+# how to build and run 
+run.sh stl_tests.cpp
+
