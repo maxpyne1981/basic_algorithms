@@ -59,6 +59,11 @@
   - add staring node to a queue, 
   - go through the queue until empty, process each children and add them to the queue, 
 
+### Binary Search Tree
+  - The left subtree of a node contains only nodes with keys lesser than the node’s key.
+  - The right subtree of a node contains only nodes with keys greater than the node’s key.
+  - The left and right subtree each must also be a binary search tree.
+  - use inorder traversal to print values in sorted order.
 
 ### study materials
 - [MIT OpenCourse](https://www.youtube.com/watch?v=HtSuA80QTyo)
