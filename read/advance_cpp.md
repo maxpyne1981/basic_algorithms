@@ -113,6 +113,7 @@ sort(v.begin(), v.end(), [](const int& a, const int& b) -> bool
    - isdigit(char)  similar
    - ispunct(char)  returns bool: true if punctuation ispunct('!'); -> true
    - isspace(char)  returns bool: true if whitespace – space, newline, tab
+   - reverse(str.begin(), str.end()); # reverse a string
    
 ### containers
 
