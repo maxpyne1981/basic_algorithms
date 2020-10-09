@@ -64,6 +64,10 @@
   - The right subtree of a node contains only nodes with keys greater than the node’s key.
   - The left and right subtree each must also be a binary search tree.
   - use inorder traversal to print values in sorted order.
+  - can be constructed from pre / post order traversal, 
+  - inorder - sorted ascending for BST, 
+
+
 
 ### study materials
 - [MIT OpenCourse](https://www.youtube.com/watch?v=HtSuA80QTyo)
