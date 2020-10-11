@@ -66,6 +66,11 @@
   - use inorder traversal to print values in sorted order.
   - can be constructed from pre / post order traversal, 
   - inorder - sorted ascending for BST, 
+  
+### Greedy algorithm
+  - "Find minimum/maximum number of something to do something" - type question
+  - need to sort the data based on some criteria - O(nlogn)
+  - start finding local minima until global min is found, 
 
 
 
