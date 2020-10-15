@@ -1,4 +1,4 @@
-# study planner
+### study planner
 
 - sliding window
 - two pointers
@@ -13,3 +13,7 @@
 - binary search tree
 - binary search, two pointers
 - array
+
+
+### Github markdown
+https://guides.github.com/features/mastering-markdown/
