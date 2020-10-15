@@ -72,6 +72,8 @@
   - need to sort the data based on some criteria - O(nlogn)
   - start finding local minima until global min is found, 
 
+### Dynamic programming
+  - [LC](https://leetcode.com/problems/house-robber/) rob house 
 
 
 ### study materials
