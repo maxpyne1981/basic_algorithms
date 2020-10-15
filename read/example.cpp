@@ -1,6 +1,6 @@
-// https://leetcode.com/problems/valid-palindrome/
-// "A man, a plan, a canal: Panama"
-// true
+### valid palindrome
+
+```
 class Solution {
     string prune(const string& s){
         string ss;
@@ -35,10 +35,10 @@ public:
         return true;
     }
 };
+```
 
-
-// remove duplicates
-
+### remove duplicates
+```
 class RemoveDuplicates {
  public:
 static int remove(vector<int>& arr) {
@@ -53,6 +53,7 @@ static int remove(vector<int>& arr) {
     return nextNonDuplicate;
   }
 };
+```
 
 ### binomial coeffinient
 ```
