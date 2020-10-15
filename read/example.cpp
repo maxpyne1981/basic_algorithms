@@ -53,3 +53,18 @@ static int remove(vector<int>& arr) {
     return nextNonDuplicate;
   }
 };
+
+### binomial coeffinient
+```
+int binomialCoeff(int n, int k)  
+{  
+    // Base Cases  
+    if (k == 0 || k == n)  
+        return 1;  
+  
+    // Recur  
+    return binomialCoeff(n - 1, k - 1) +  
+                binomialCoeff(n - 1, k);  
+}  
+  
+```
