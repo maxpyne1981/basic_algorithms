@@ -68,3 +68,6 @@
 ### Ruby on rails
 - started in 2003
 - MVC; Convention over configuration; DRY (Dont repeat yourself)
+
+### General system design blogs
+- ref [blog](https://github.com/checkcheckzz/system-design-interview)
