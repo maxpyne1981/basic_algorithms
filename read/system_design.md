@@ -71,3 +71,4 @@
 
 ### General system design blogs
 - ref [blog](https://github.com/checkcheckzz/system-design-interview)
+- ref [highscalability.com](http://highscalability.com/blog/category/example)
