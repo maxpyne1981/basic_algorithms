@@ -116,6 +116,22 @@ sort(v.begin(), v.end(), [](const int& a, const int& b) -> bool
    - reverse(str.begin(), str.end()); # reverse a string
    - add char to string, s += c;
    
+### tokenize a string
+```
+   vector<string> split(string path, char delim){
+        vector<string> result;
+        stringstream ss(path);
+        
+        string item;
+        while (getline (ss, item, delim)) {
+            if(!item.empty())
+                result.push_back (item);
+        }
+
+        return result;
+    }
+```
+   
 ### containers
 
 ### stack and queue
