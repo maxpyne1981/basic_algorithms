@@ -1,3 +1,7 @@
+### sql query examples
+1. select product_id from Products where low_fats='Y' and recyclable='Y';
+
+
 ### valid palindrome
 
 ```
