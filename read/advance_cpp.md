@@ -190,11 +190,15 @@ sort(v.begin(), v.end(), [](const int& a, const int& b) -> bool
 
 ### Heap    
     - vector<int> minHeap(nums.begin(), nums.begin() + k);
-    - make_heap(minHeap.begin(), minHeap.end(), greater());
-    - pop_heap(minHeap.begin(), minHeap.end(), greater());
-    - minHeap.pop_back();
-    - minHeap.push_back(nums[i]);
-    - push_heap(minHeap.begin(), minHeap.end(), greater());
+    - make_heap(minHeap.begin(), minHeap.end(), greater()); // rearranges elements in heap
+    - pop_heap(minHeap.begin(), minHeap.end(), greater()); // does not change size, moves hightest element to last place, use pop_back()
+    - minHeap.pop_back();  
+    - minHeap.push_back(nums[i]); 
+    - push_heap(minHeap.begin(), minHeap.end(), greater()); // heapify the last added element
+    - goes together: pop_heap() + pop_back()
+    - goes together: push_back() + push_heap()
+    - sort_heap() ; // rearranges elements in ascending order, 
+    - make_heap(), push_heap(), pop_heap(), sort_heap(), is_heap, is_heap_until()
     
 
 ### std::array
