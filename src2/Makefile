@@ -1,5 +1,5 @@
 CC=gcc
-CXX=g++
+CXX=g++ -g
 RM=rm -f
 CPPFLAGS=-g $(shell root-config --cflags)
 LDFLAGS=-g $(shell root-config --ldflags)
