@@ -55,13 +55,23 @@
 - REDIS DB, in memory database,
 
 
-### REDIS
+### REDIS CACHE
 - redis lab
 - in memory distributed data structure / data base solution / used for large volume of data caching, 
 - fast, modular, 
 - written in C, super fast, 
 - list, set, map etc
 
+### CACHE
+  - eviction policy Least Recently Used (LRU), Least Frequently used (LFU), FIFO, 
+ 
+### DNS
+  - domain name server,
+  - 3rd party, maps domain name to ip address, 
+ 
+### CDN
+  - content deliveray network, 
+  - 
 
 
 
@@ -72,3 +82,4 @@
 ### General system design blogs
 - ref [blog](https://github.com/checkcheckzz/system-design-interview)
 - ref [highscalability.com](http://highscalability.com/blog/category/example)
+- ref [free course](https://systeminterview.com/scale-from-zero-to-millions-of-users.php)
