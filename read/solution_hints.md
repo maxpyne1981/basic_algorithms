@@ -4,6 +4,10 @@
   - if window is fixed, use for + if
   - if window is changine, use for + while
 
+### next greatest element
+  - start from right
+  - use a stack to find next greatest
+
 ### Two pointer
   - use for: sorted array, do something upto number n
   - remove unique in place, use slow and fast pointer, and keep shifting left when a duplicate is found
