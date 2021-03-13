@@ -1,8 +1,17 @@
 # Solution hints
 
+### intervals
 o Merging internals : sort by start, go over the intervals, keep merging,
 o Meeting rooms: map, add +1 when meeting starts, -1 when end, add rooms, and keep track of max, 
+
+### sliding window
 o Sliding window: if window is fixed, use for, if window is changine, use for + while;
+
+
+### linked list
+o palindrome: use slow and fast pointer to find mid, reverse 2nd half, traverese and check if  they are equal, othersiwe return false, remember to reverse 2nd half, 
+o reverse : use prev, cur, next and 4 steps to reverse, 
+
 
 ### next greatest element
   - start from right
