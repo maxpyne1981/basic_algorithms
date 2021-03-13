@@ -1,8 +1,8 @@
 # Solution hints
 
-### Sliding window
-  - if window is fixed, use for + if
-  - if window is changine, use for + while
+o Merging internals : sort by start, go over the intervals, keep merging,
+o Meeting rooms: map, add +1 when meeting starts, -1 when end, add rooms, and keep track of max, 
+o Sliding window: if window is fixed, use for, if window is changine, use for + while;
 
 ### next greatest element
   - start from right
