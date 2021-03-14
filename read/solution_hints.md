@@ -1,25 +1,29 @@
 # Solution hints
+
+### binary search tree
+- validate: recurse(node, min, max), check if value is within min and max, then recurse recurse(left, min, val) + recurse(right, val, max);
+
 ### longest palindromic substring
-o for i, max( expandFromMiddle(i,i) and expandFromMiddle(i, i+1), calculate start and end based on len, 
+- for i, max( expandFromMiddle(i,i) and expandFromMiddle(i, i+1), calculate start and end based on len, 
 
 ### sums
-o two sum: use hash table / sort + two pointer
-o three sum: sort, start from left, them perfrom two pointer two sum on remaining items, handle duplicates, 
+- two sum: use hash table / sort + two pointer
+- three sum: sort, start from left, them perfrom two pointer two sum on remaining items, handle duplicates, 
 
 ### stock price
-o single pass, keep track of min price or max profit, return max profit, 
+- single pass, keep track of min price or max profit, return max profit, 
 
 ### intervals
-o Merging internals : sort by start, go over the intervals, keep merging,
-o Meeting rooms: map, add +1 when meeting starts, -1 when end, add rooms, and keep track of max, 
+- Merging internals : sort by start, go over the intervals, keep merging,
+- Meeting rooms: map, add +1 when meeting starts, -1 when end, add rooms, and keep track of max, 
 
 ### sliding window
-o Sliding window: if window is fixed, use for, if window is changine, use for + while;
+- Sliding window: if window is fixed, use for, if window is changine, use for + while;
 
 
 ### linked list
-o palindrome: use slow and fast pointer to find mid, reverse 2nd half, traverese and check if  they are equal, othersiwe return false, remember to reverse 2nd half, 
-o reverse : use prev, cur, next and 4 steps to reverse, 
+- palindrome: use slow and fast pointer to find mid, reverse 2nd half, traverese and check if  they are equal, othersiwe return false, remember to reverse 2nd half, 
+- reverse : use prev, cur, next and 4 steps to reverse, 
 
 ### next greatest element
   - start from right
