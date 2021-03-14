@@ -1,4 +1,13 @@
 # Solution hints
+### longest palindromic substring
+o for i, max( expandFromMiddle(i,i) and expandFromMiddle(i, i+1), calculate start and end based on len, 
+
+### sums
+o two sum: use hash table / sort + two pointer
+o three sum: sort, start from left, them perfrom two pointer two sum on remaining items, handle duplicates, 
+
+### stock price
+o single pass, keep track of min price or max profit, return max profit, 
 
 ### intervals
 o Merging internals : sort by start, go over the intervals, keep merging,
@@ -12,7 +21,6 @@ o Sliding window: if window is fixed, use for, if window is changine, use for + 
 o palindrome: use slow and fast pointer to find mid, reverse 2nd half, traverese and check if  they are equal, othersiwe return false, remember to reverse 2nd half, 
 o reverse : use prev, cur, next and 4 steps to reverse, 
 
-
 ### next greatest element
   - start from right
   - use a stack to find next greatest
@@ -24,8 +32,6 @@ o reverse : use prev, cur, next and 4 steps to reverse,
 ### Hints
   - perfect number; num = sum of proper divisor, 28 = 1 + 2 + 4 + 7 + 14, count upto sqrt(n) and add i and num/i
   - broken calculator, *2 or -1, go X->Y; start from Y and go back to X
-
-
 
 ### Happy number:
     - iterate (sum of sq of digits) = 1, example 25
