@@ -1,6 +1,16 @@
 # Things to remember in system design
 - monolith architecture: single point of failure, steep learning curve, good for small team
 - microservice architecture: decoupled system, difficult to design, easy to make modifications and deploy, 
+- nosql dbs: cassandra, mongodb, neo4j, amazon dynamodb, 
+- load balancing at multiple levels, : least connection / least response / least bandwidth / round robin /
+- caching: app server cache, content delivery network, cache eviction,
+- data partitioning: horizontal : different tables; vertical: different db servers, problems: joining,
+- proxy server:  
+- sql : acid, join, 
+- nosql: fast, key-value, rapid development, 
+- CAP theorem: consistency, availbility, partition tolerance, 
+- consistent hashing: key % n -> not horizontally scalable, not load balanced, 
+- 
 
 
 ### netflix 
@@ -72,9 +82,6 @@
 ### CDN
   - content deliveray network, 
   - 
-
-
-
 ### Ruby on rails
 - started in 2003
 - MVC; Convention over configuration; DRY (Dont repeat yourself)
