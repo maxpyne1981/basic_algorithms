@@ -1,3 +1,7 @@
+# networking
+- rtp : realtime transfer protocol, data loss ok, real time is important, 
+- dns: domain name system, name to ip address, request-> resolver -> root server -> TLD server -> auth server
+
 # Things to remember in system design
 - monolith architecture: single point of failure, steep learning curve, good for small team
 - microservice architecture: decoupled system, difficult to design, easy to make modifications and deploy, 
