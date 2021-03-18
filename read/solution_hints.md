@@ -9,6 +9,7 @@
 
 ### string
 - reverse a string without using string functions: push it to a stack, pop and print, 
+- word ladder: bfs + take each word, for all char, for all alphabate, update one char at a time, if present in the dict, push it in the queue, continue bfs, 
 
 ### binary tree
 - countNode() -> count(left) + count(right) + 1;
