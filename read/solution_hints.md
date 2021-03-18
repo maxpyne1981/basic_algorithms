@@ -1,5 +1,8 @@
 # Solution hints
 
+### string
+- reverse a string without using string functions: push it to a stack, pop and print, 
+
 ### binary search tree
 - validate: recurse(node, min, max), check if value is within min and max, then recurse recurse(left, min, val) + recurse(right, val, max);
 
