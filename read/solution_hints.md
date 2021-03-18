@@ -1,7 +1,17 @@
 # Solution hints
 
+### stack
+- min stack: use stack<value, min> to keep track of data and current minima, 
+
+### linked list
+- cycle in a list: use slow and fast ptrs
+- delete given node without head, copy over next to node, create next and node, and use node as prev to delete it, 
+
 ### string
 - reverse a string without using string functions: push it to a stack, pop and print, 
+
+### binary tree
+- countNode() -> count(left) + count(right) + 1;
 
 ### binary search tree
 - validate: recurse(node, min, max), check if value is within min and max, then recurse recurse(left, min, val) + recurse(right, val, max);
