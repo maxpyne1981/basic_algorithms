@@ -149,6 +149,12 @@
     where description!='boring' and (id % 2) = 1
     order by rating desc;    
 
+- select a.name as WAREHOUSE_NAME, SUM(a.units*b.Width*b.Length*b.Height) as VOLUME 
+    from Warehouse as a
+    join Products as b on a.product_id=b.product_id
+    group by a.name
+    order by a.name;
+
 ## modify database
 
 ### inserting data
