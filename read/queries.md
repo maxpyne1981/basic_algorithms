@@ -107,6 +107,44 @@
     FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
     ORDER BY Customers.CustomerName;
 
+### group by
+- SELECT column_name(s)
+    FROM table_name
+    WHERE condition
+    GROUP BY column_name(s)
+    ORDER BY column_name(s);
+
+- SELECT COUNT(CustomerID), Country
+    FROM Customers
+    GROUP BY Country
+    ORDER BY COUNT(CustomerID) DESC;
+
+### having
+- SELECT COUNT(CustomerID), Country
+    FROM Customers
+    GROUP BY Country
+    HAVING COUNT(CustomerID) > 5;
+
+
+### examples
+# Write your MySQL query statement below
+- SELECT a.product_id,ROUND(SUM(b.units*a.price)/SUM(b.units),2) as average_price
+    FROM Prices as a
+    JOIN UnitsSold as b
+    ON a.product_id=b.product_id AND (b.purchase_date BETWEEN a.start_date AND a.end_date)
+    GROUP BY product_id;
+
+
+- select email from 
+    (
+    
+        select email, count(email) as num 
+        from Person 
+        group by email
+    
+    )  as viewtable 
+    where num > 1;    
+
 ## modify database
 
 ### inserting data
