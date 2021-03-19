@@ -8,6 +8,7 @@
 - delete given node without head, copy over next to node, create next and node, and use node as prev to delete it, 
 - palindrome: use slow and fast pointer to find mid, reverse 2nd half, traverese and check if  they are equal, othersiwe return false, remember to reverse 2nd half, 
 - reverse : use prev, cur, next and 4 steps to reverse, 
+- rotate list: calculate length, rotate %= length, connect head to tail, rotate, 
 
 
 ### string
@@ -17,9 +18,14 @@
 - reverse a string without using string functions: push it to a stack, pop and print, 
 - word ladder: bfs + take each word, for all char, for all alphabate, update one char at a time, if present in the dict, push it in the queue, continue bfs, 
 - longest palindromic substring: for i, max( expandFromMiddle(i,i) and expandFromMiddle(i, i+1), calculate start and end based on len, 
+- longest substring with K distinct element / fruit in a basket: sliding window + char freq map, keep adding end char,
+  when map.size() > K, start shifting start window, remove if count == 0, return length;
+- valid parenthesis string: use two stacks to keep track of "(" and "*" separately, if one is empty, use * to close as
+  many ( as possible, 
 
 ### binary tree
 - countNode() -> count(left) + count(right) + 1;
+- lowest common a
 
 ### binary search tree
 - validate: recurse(node, min, max), check if value is within min and max, then recurse recurse(left, min, val) + recurse(right, val, max);
@@ -36,6 +42,8 @@
 
 ### hints for uncommon problems
 - stock price: single pass, keep track of min price or max profit, return max profit, 
+- Morris number, count and say: 1->11 (one 1) -> 21 (two 1) etc, solve recursively, convert into string, then count
+  chars, 
 
 ### intervals
 - Merging internals : sort by start, go over the intervals, keep merging,
