@@ -45,9 +45,71 @@
 - ^ any char not in bracker h[^oa]t hit, hut but not hot, hat
 - - range of char c[a-b]t cat, cbt
 
+- select * from Users where mail REGEXP '^[a-z][a-z0-9-./_]*@leetcode.com$'
+
+### join
+- SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate 
+    FROM Orders 
+    INNER JOIN Customers 
+    ON Orders.CustomerID=Customers.CustomerID;
+
+
+- SELECT                p.project_id
+                        ROUND(AVG(e.experience_years), 2) AS average_years
+    FROM                Project AS p
+    INNER JOIN          Employee AS e
+    ON                  p.employee_id = e.employee_id
+    GROUP BY            p.project_id    
+
+### inner join, A intersection B
+- SELECT column_name(s)
+    FROM table1
+    INNER JOIN table2
+    ON table1.column_name = table2.column_name;
+
+- SELECT Orders.OrderID, Customers.CustomerName
+    FROM Orders
+    INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;    
+    
+
+### left join, A + (A intersection B)
+- SELECT column_name(s)
+    FROM table1
+    LEFT JOIN table2
+    ON table1.column_name = table2.column_name;
+
+- SELECT Customers.CustomerName, Orders.OrderID
+    FROM Customers
+    LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+    ORDER BY Customers.CustomerName;
+
+### right join, (A intersection B) + B
+
+- SELECT column_name(s)
+    FROM table1
+    RIGHT JOIN table2
+    ON table1.column_name = table2.column_name;
+
+- SELECT Customers.CustomerName, Orders.OrderID
+    FROM Customers
+    RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+    ORDER BY Customers.CustomerName;
+
+### full outer join, A union B
+- SELECT column_name(s)
+    FROM table1
+    FULL OUTER JOIN table2
+    ON table1.column_name = table2.column_name
+    WHERE condition;
+
+- SELECT Customers.CustomerName, Orders.OrderID
+    FROM Customers
+    FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+    ORDER BY Customers.CustomerName;
 
 ## modify database
 
 ### inserting data
 - INSERT INTO table_name (column1, column2, column3) VALUES (value1, value2, value3);
+
 
