@@ -48,94 +48,94 @@
 - select * from Users where mail REGEXP '^[a-z][a-z0-9-./_]*@leetcode.com$'
 
 ### join
-- SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate 
+- ```SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate 
     FROM Orders 
     INNER JOIN Customers 
-    ON Orders.CustomerID=Customers.CustomerID;
+    ON Orders.CustomerID=Customers.CustomerID;```
 
 
-- SELECT                p.project_id
+- ```SELECT                p.project_id
                         ROUND(AVG(e.experience_years), 2) AS average_years
     FROM                Project AS p
     INNER JOIN          Employee AS e
     ON                  p.employee_id = e.employee_id
-    GROUP BY            p.project_id    
+    GROUP BY            p.project_id;  ```  
 
 ### inner join, A intersection B
-- SELECT column_name(s)
+- ```SELECT column_name(s)
     FROM table1
     INNER JOIN table2
-    ON table1.column_name = table2.column_name;
+    ON table1.column_name = table2.column_name;```
 
-- SELECT Orders.OrderID, Customers.CustomerName
+- ```SELECT Orders.OrderID, Customers.CustomerName
     FROM Orders
-    INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;    
+    INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;  ```  
     
 
 ### left join, A + (A intersection B)
-- SELECT column_name(s)
+- ```SELECT column_name(s)
     FROM table1
     LEFT JOIN table2
-    ON table1.column_name = table2.column_name;
+    ON table1.column_name = table2.column_name;```
 
-- SELECT Customers.CustomerName, Orders.OrderID
+- ```SELECT Customers.CustomerName, Orders.OrderID
     FROM Customers
     LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
-    ORDER BY Customers.CustomerName;
+    ORDER BY Customers.CustomerName;```
 
 ### right join, (A intersection B) + B
 
-- SELECT column_name(s)
+- ```SELECT column_name(s)
     FROM table1
     RIGHT JOIN table2
-    ON table1.column_name = table2.column_name;
+    ON table1.column_name = table2.column_name;```
 
-- SELECT Customers.CustomerName, Orders.OrderID
+- ```SELECT Customers.CustomerName, Orders.OrderID
     FROM Customers
     RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
-    ORDER BY Customers.CustomerName;
+    ORDER BY Customers.CustomerName;```
 
 ### full outer join, A union B
-- SELECT column_name(s)
+- ```SELECT column_name(s)
     FROM table1
     FULL OUTER JOIN table2
     ON table1.column_name = table2.column_name
-    WHERE condition;
+    WHERE condition;```
 
-- SELECT Customers.CustomerName, Orders.OrderID
+- ```SELECT Customers.CustomerName, Orders.OrderID
     FROM Customers
     FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
-    ORDER BY Customers.CustomerName;
+    ORDER BY Customers.CustomerName;```
 
 ### group by
-- SELECT column_name(s)
+- ```SELECT column_name(s)
     FROM table_name
     WHERE condition
     GROUP BY column_name(s)
-    ORDER BY column_name(s);
+    ORDER BY column_name(s);```
 
-- SELECT COUNT(CustomerID), Country
+- ```SELECT COUNT(CustomerID), Country
     FROM Customers
     GROUP BY Country
-    ORDER BY COUNT(CustomerID) DESC;
+    ORDER BY COUNT(CustomerID) DESC;```
 
 ### having
-- SELECT COUNT(CustomerID), Country
+- ```SELECT COUNT(CustomerID), Country
     FROM Customers
     GROUP BY Country
-    HAVING COUNT(CustomerID) > 5;
+    HAVING COUNT(CustomerID) > 5;```
 
 
 ### examples
 # Write your MySQL query statement below
-- SELECT a.product_id,ROUND(SUM(b.units*a.price)/SUM(b.units),2) as average_price
+- ```SELECT a.product_id,ROUND(SUM(b.units*a.price)/SUM(b.units),2) as average_price
     FROM Prices as a
     JOIN UnitsSold as b
     ON a.product_id=b.product_id AND (b.purchase_date BETWEEN a.start_date AND a.end_date)
-    GROUP BY product_id;
+    GROUP BY product_id;```
 
 
-- select email from 
+- ```select email from 
     (
     
         select email, count(email) as num 
@@ -143,11 +143,11 @@
         group by email
     
     )  as viewtable 
-    where num > 1;
+    where num > 1;```
     
-- select * from cinema
+- ```select * from cinema
     where description!='boring' and (id % 2) = 1
-    order by rating desc;    
+    order by rating desc;```
 
 ## modify database
 
