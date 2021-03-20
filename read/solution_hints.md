@@ -22,6 +22,9 @@
   when map.size() > K, start shifting start window, remove if count == 0, return length;
 - valid parenthesis string: use two stacks to keep track of "(" and "*" separately, if one is empty, use * to close as
   many ( as possible, 
+- min deletion to get good string: all char with diff freq: create char map, go over freqs, check if present in freq set, keep reducing, check again, add it to set if not zero,  
+- [largest alphabaric char](https://www.geeksforgeeks.org/find-the-largest-alphabetic-character-present-in-the-string/): 
+-  Maximum Length of a Concatenated String with Unique Characters: start from index 0, recurse, use dfs, create all possible string, check if uniq, keep track of maxlenth. Recursion + backtrack;
 
 ### binary tree
 - countNode() -> count(left) + count(right) + 1;
@@ -39,6 +42,7 @@
 ### sums
 - two sum: use hash table / sort + two pointer
 - three sum: sort, start from left, them perfrom two pointer two sum on remaining items, handle duplicates, 
+- Partition to K Equal Sum Subsets: target = sum / k; create vector<int> v(k), recursively search starting from index 0, for every group, add currEleme, recurse, otherwise remove, continue;
 
 ### hints for uncommon problems
 - stock price: single pass, keep track of min price or max profit, return max profit, 
