@@ -28,7 +28,8 @@
 
 ### binary tree
 - countNode() -> count(left) + count(right) + 1;
-- lowest common a
+- lowest common ancestor: 
+- count node on a compelet tree: all levels are full, except for the last level where the nodes are pushed to left, find H, count # of nodes upto H-1, run binary search for the last level, check the right most node that exist, (two binary search, one for tree, one for the lowest level) and then add upper count + lower count, 
 
 ### binary search tree
 - validate: recurse(node, min, max), check if value is within min and max, then recurse recurse(left, min, val) + recurse(right, val, max);
