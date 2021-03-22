@@ -75,6 +75,29 @@
 - fast, modular, 
 - written in C, super fast, 
 - list, set, map etc
+- cache can be on the service server, close to db, or somewhere in between, prefer a large distributed global cache in between 
+- write through cache, write back, specially for password etc, 
+- if data is changed, db broastcast a mesg, all cache updates, 
+- eventual consistency, 
+- thrashing, cache missing, 
+- periodically write data on db, 
+- LRU, LFU, eviction policy, 
+
+### How to store images
+- file 
+- blob (binary large object)
+- clob (char large object)
+- prefer file base storage
+- use CDN to experiade
+
+### microservice
+- client -> gateway -> profile service -> redirect the service, 
+- image service + distributed file system to store images, decouple from profile authentication service, 
+- chatting , http does not work, server client, receiver client need to poll all the time, 
+- use a different protocol, web-socket/ tcp connection, xmpp connection
+- use a sessions service to maintain connection between two users for direct messaging, 
+- 
+- 
 
 ### CACHE
   - eviction policy Least Recently Used (LRU), Least Frequently used (LFU), FIFO, 
