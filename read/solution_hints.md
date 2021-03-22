@@ -49,6 +49,7 @@
 - stock price: single pass, keep track of min price or max profit, return max profit, 
 - Morris number, count and say: 1->11 (one 1) -> 21 (two 1) etc, solve recursively, convert into string, then count
   chars, 
+- LRU cache: map<key, list_iterator>, list<vector<key, value>>, reorder the list as the key is polled, erase based on v[0] and v[1].  
 
 ### intervals
 - Merging internals : sort by start, go over the intervals, keep merging,
