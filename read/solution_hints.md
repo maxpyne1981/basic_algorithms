@@ -54,6 +54,10 @@
 - three sum: sort, start from left, them perfrom two pointer two sum on remaining items, handle duplicates, 
 - Partition to K Equal Sum Subsets: target = sum / k; create vector<int> v(k), recursively search starting from index 0, for every group, add currEleme, recurse, otherwise remove, continue;
 
+### binary searc
+- find range in sorted array: run two binary search to find start and end index of the value, use same helper function
+  with a bool flag searchLeft = false. 
+
 ### hints for uncommon problems
 - stock price: single pass, keep track of min price or max profit, return max profit, 
 - Morris number, count and say: 1->11 (one 1) -> 21 (two 1) etc, solve recursively, convert into string, then count
