@@ -115,6 +115,8 @@ sort(v.begin(), v.end(), [](const int& a, const int& b) -> bool
    - isspace(char)  returns bool: true if whitespace – space, newline, tab
    - reverse(str.begin(), str.end()); # reverse a string
    - add char to string, s += c;
+   - str.erase(pos,len)
+   - str.insert(pos, str2), str.insert(pos, char)
    
 ### tokenize a string
 ```

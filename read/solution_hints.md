@@ -9,6 +9,9 @@
 - palindrome: use slow and fast pointer to find mid, reverse 2nd half, traverese and check if  they are equal, othersiwe return false, remember to reverse 2nd half, 
 - reverse : use prev, cur, next and 4 steps to reverse, 
 - rotate list: calculate length, rotate %= length, connect head to tail, rotate, 
+- start of a cycle in a linked list: usual slow / fast ptr to find where they intersect, then start two ptrs from head
+  and intersect, move until they meet, that's the beginning of cycle,
+
 
 
 ### string
@@ -20,11 +23,17 @@
 - longest palindromic substring: for i, max( expandFromMiddle(i,i) and expandFromMiddle(i, i+1), calculate start and end based on len, 
 - longest substring with K distinct element / fruit in a basket: sliding window + char freq map, keep adding end char,
   when map.size() > K, start shifting start window, remove if count == 0, return length;
+- longest substring without repeating chars: (a) map<char, lastpos> + sliding window, if you find a char, check length =
+  max(length, right - left + 1), (b) map<char, count>, move left as if you hit repeating char, move left till it is
+  gone, take max length
 - valid parenthesis string: use two stacks to keep track of "(" and "*" separately, if one is empty, use * to close as
   many ( as possible, 
 - min deletion to get good string: all char with diff freq: create char map, go over freqs, check if present in freq set, keep reducing, check again, add it to set if not zero,  
 - [largest alphabaric char](https://www.geeksforgeeks.org/find-the-largest-alphabetic-character-present-in-the-string/): 
 -  Maximum Length of a Concatenated String with Unique Characters: start from index 0, recurse, use dfs, create all possible string, check if uniq, keep track of maxlenth. Recursion + backtrack;
+- backspace + string equivalent: use stack to prune chars in string A and B, check if A == B, 
+- almost palindrome: remove each char, if palindrome, return true, else, add back, at the end check if original string
+  is palindrome, 
 
 ### binary tree
 - countNode() -> count(left) + count(right) + 1;
@@ -50,6 +59,8 @@
 - Morris number, count and say: 1->11 (one 1) -> 21 (two 1) etc, solve recursively, convert into string, then count
   chars, 
 - LRU cache: map<key, list_iterator>, list<vector<key, value>>, reorder the list as the key is polled, erase based on v[0] and v[1].  
+- trapping rainwater: use two pointer, strat with lower height, if left < maxLeft, trap water total += maxLeft - left, or update maxLeft, move
+  left, 
 
 ### intervals
 - Merging internals : sort by start, go over the intervals, keep merging,
@@ -62,9 +73,12 @@
   - start from right
   - use a stack to find next greatest
 
+### arrays
+
 ### Two pointer
   - use for: sorted array, do something upto number n
   - remove unique in place, use slow and fast pointer, and keep shifting left when a duplicate is found
+  - Container With Most Water: use two pointer, calculate H and W, vol = max(vol, W*H), move pointer with lower height, 
   
 ### Hints
   - perfect number; num = sum of proper divisor, 28 = 1 + 2 + 4 + 7 + 14, count upto sqrt(n) and add i and num/i
@@ -114,3 +128,20 @@
 
 ### study materials
 - [MIT OpenCourse](https://www.youtube.com/watch?v=HtSuA80QTyo)
+
+### kth largest element
+    ```
+    int findKthLargest(vector<int>& nums, int k) {
+        
+        auto f = [](int a, int b){return a > b;};
+        priority_queue<int, vector<int>, decltype(f)> queue(f);
+        
+        for(auto n : nums){
+            queue.push(n);
+            if(queue.size() > k)
+                queue.pop();
+        }
+            
+        return queue.top();
+    }
+    ```
