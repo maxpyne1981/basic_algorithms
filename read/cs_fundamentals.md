@@ -60,3 +60,34 @@ Compiler does inlining for performing optimizations. If compiler optimization ha
 ### stack vs heap
 Stack Allocation : The allocation happens on contiguous blocks of memory. We call it stack memory allocation because the allocation happens in function call stack. The size of memory to be allocated is known to compiler and whenever a function is called, its variables get memory allocated on the stack. And whenever the function call is over, the memory for the variables is deallocated. This all happens using some predefined routines in compiler. Programmer does not have to worry about memory allocation and deallocation of stack variables.
 Heap Allocation : The memory is allocated during execution of instructions written by programmers. Note that the name heap has nothing to do with heap data structure. It is called heap because it is a pile of memory space available to programmers to allocated and de-allocate. If a programmer does not handle this memory well, memory leak can happen in the program.
+
+
+
+### cpu
+- registers: small fast memory, 
+- opcode + register code + instruction address register, 
+- cpu cycle, fetch , decode, execute, write
+- load-a, load-b, store, add, 
+- 64 bit registers, 
+- 256 bit memory + matrix config + multiplexer, 
+- 4 cores , 8 threadfs => 8 logical cores, 
+- thredas  > cores, switch context, gives core time to fetch data etc, core works at one thread at a time,   
+- 4 core 8 thredas, not parallel, rather concurrant, does switching, appears like a  
+
+
+### agile
+- scope, schedule, resources, quality
+- Fixed scope, firm schedule, flexible scope, 
+
+
+
+### Vtune amplifier, 
+- core, socket, nodes, 
+- qopt_report = 5
+
+
+
+
+
+### ref
+1. cpu perf questions [ref](https://www.wisdomjobs.com/e-university/cpu-interview-questions.html)
