@@ -1,0 +1,6 @@
+### vtune
+- hot spot analysis -> top down view 
+- low cpu usage, problem with concurrancy, 
+- active threads, not execution, 
+- mutex locks, 
+

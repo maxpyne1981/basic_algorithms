@@ -91,3 +91,11 @@ Heap Allocation : The memory is allocated during execution of instructions writt
 
 ### ref
 1. cpu perf questions [ref](https://www.wisdomjobs.com/e-university/cpu-interview-questions.html)
+
+
+
+
+## OpenMP
+- [ref](https://hpc.llnl.gov/openmp-tutorial)
+- uniform mempry access / non uniform memory access (numa)
+- 

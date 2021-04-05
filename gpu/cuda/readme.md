@@ -91,3 +91,19 @@ __global__ void vectorAdd( float *A, float *B, float *C, int numElements) {
                     0.00%     896ns         1     896ns     896ns     896ns  cudaProfilerStop
                     0.00%     637ns         2     318ns     232ns     405ns  cuDeviceGet
                     0.00%     332ns         1     332ns     332ns     332ns  cuDeviceGetUuid
+
+
+### how to debug cuda workflow
+- [video tutorials](https://www.youtube.com/watch?v=ENerb1HO6zs)
+- race condition, 
+- deadlocks, 
+- shared mempry level / race condition bugs, 
+- only warps are executed simultaneously,
+- shared / device memory, use atomicadd
+- use -G -g hodet and cuda debugging 
+- very difficulti to debug  following two bug types 
+- race condition bugs show up at optimized code, 
+- out of resource allocation, 
+- 
+
+
