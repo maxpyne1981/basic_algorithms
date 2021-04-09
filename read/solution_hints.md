@@ -149,3 +149,20 @@
         return queue.top();
     }
     ```
+    
+### LCA binary tree
+```
+    TreeNode* lowestCommonAncestor(TreeNode* node, TreeNode* p, TreeNode* q) {
+        if(!node) return nullptr;
+        if(node==p || node==q) return node;
+        
+        TreeNode* fromLeft = lowestCommonAncestor(node->left, p, q);
+        TreeNode* fromRight = lowestCommonAncestor(node->right, p, q);
+        
+        if(fromLeft && fromRight) return node; // LCA found
+        if(!fromLeft && !fromRight) return nullptr; // LCA is not in this branch
+        
+        return fromLeft ? fromLeft : fromRight;
+        
+    }
+```
