@@ -37,7 +37,7 @@
 
 ### binary tree
 - countNode() -> count(left) + count(right) + 1;
-- lowest common ancestor: 
+- lowest common ancestor: search for either node, if found, return non null node to parent, if a node gets 2 non null node from two leaves, then it is the LCA.
 - count node on a compelet tree: all levels are full, except for the last level where the nodes are pushed to left, find H, count # of nodes upto H-1, run binary search for the last level, check the right most node that exist, (two binary search, one for tree, one for the lowest level) and then add upper count + lower count, 
 
 ### binary search tree
