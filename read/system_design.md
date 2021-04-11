@@ -18,8 +18,11 @@
 
 
 ### netflix 
-- stat: 110mil subscribers, 220 countries, 3B revenue/quarter, 250mil hrs of vide / day, 1B hrs video / week, 37% of peak US traffic, 
+- stat: 110mil subscribers, 220 countries, 3B revenue/quarter, 250mil hrs of vide / day, 1B hrs video / week, 37% of peak US traffic,
+- 2008: own data center -> AWS, monolith -> microservice to reduce points of failure,  
 - client, backend, CDN ( content delivery network )
+- EC2, AWS S3, business logic uservice, Hadoop-spark, video processsing and encoding, openConnect CDN, 
+- click play button, get url from central server, checks for license/subscribtion etc, gets correct CDN location, 
 - stores videos as multiple format + multiple resolution, 
 - takes original video, breaks into chunks (~4s), buckets into (format, resolution) pair, 
 - does transcoding / encoding done over 300 cpu, split into chunks, once done, pushed to S3 storage, 
