@@ -33,7 +33,8 @@
 -  Maximum Length of a Concatenated String with Unique Characters: start from index 0, recurse, use dfs, create all possible string, check if uniq, keep track of maxlenth. Recursion + backtrack;
 - backspace + string equivalent: use stack to prune chars in string A and B, check if A == B, 
 - almost palindrome: remove each char, if palindrome, return true, else, add back, at the end check if original string
-  is palindrome, 
+  is palindrome,
+- basic calculator: +:1, -:-1; left to right, at ( push sum and sign to stack and evaluate everything inside, then at ) pop stack and sign  
 
 ### binary tree
 - countNode() -> count(left) + count(right) + 1;
@@ -65,6 +66,9 @@
 - LRU cache: map<key, list_iterator>, list<vector<key, value>>, reorder the list as the key is polled, erase based on v[0] and v[1].  
 - trapping rainwater: use two pointer, strat with lower height, if left < maxLeft, trap water total += maxLeft - left, or update maxLeft, move
   left, 
+- robot return to zero: sum(up + down) == 0 && sum(left + right) == 0;  
+- wave array : A. O(nlogn) sort and swap pairwise, B. O(n) loop over all even pos elem, compare with prev, compare with next, and swap, 
+- # of uniq paths, robot move from TL to BR: use dp grid, cell-ij=sum(up + left), first row/ col all 1, because there is only one way to reach those cells, 
 
 ### intervals
 - Merging internals : sort by start, go over the intervals, keep merging,
