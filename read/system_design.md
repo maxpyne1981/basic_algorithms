@@ -166,4 +166,12 @@
 -  Cassandra mongodb better scales horizontally, mysql scales vertically,
 -  add redundancy to ensure consistemcy and availability, but at a cost, 
 -  
--  
+
+## object oriented deisgn
+
+### elevator
+- passangers, 
+- elevator cars, 
+- doors, 
+- buttons, 
+
