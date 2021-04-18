@@ -1,8 +1,24 @@
-# networking
+### different components of a system design
+- load balancer: amazon elastic load balancer, 
+- NoSql dbs: amazon dynamo db, cassandra,
+- Sql Dbs: MySql, PostGl, 
+- Network protocols: communication handshake: HTTP(), 
+    
+
+
+### networking
+- TCP / IP transmition control protocol, Internel protocol, 
+- HTTP: uses TCP to comminuicate, 
+- UDP: user datagram protocol, UDP / IP/ solvable high latency,
+- SMTP: simple mail ransfer protocol sending email, 
+- POP3: Port Office Protocol, 
+- IMAP: Internel mesg ascc protocol, 
+- HTTP: 
+- FTP: file transfer protocol, 
 - rtp : realtime transfer protocol, data loss ok, real time is important, 
 - dns: domain name system, name to ip address, request-> resolver -> root server -> TLD server -> auth server
 
-# Things to remember in system design
+### Things to remember in system design
 - monolith architecture: single point of failure, steep learning curve, good for small team
 - microservice architecture: decoupled system, difficult to design, easy to make modifications and deploy, 
 - nosql dbs: cassandra, mongodb, neo4j, amazon dynamodb, 
@@ -68,6 +84,28 @@
 
 ### Tiny URL
 
+### Yelp / map search 
+- add / del/ edit entry
+- search nearby places within a given caregory
+- divide map into grids, 10x10 mile2, 200 million sq mile, 20 million grid, ~ 4 GB RAM, 
+- for dense grids, use QuadTree to break grid into small pieces, when we reach a limit, 
+- QuadTree: tree with 4 children, 
+- given user location, keep searching for neighboring leaf nodes till desired result is found or max raduius is reached, 
+- space to store quadtree : 12GB, 500M/500loc / grid = 1M grid points, 
+- insert: add to database + insert into quadtree, 
+- client -> load balance -> [app servers] -> [QuadTree servers] -> databases, 
+
+### Ticketmaster
+- 3 billion view, 10 million ticket booking / month
+- 100 byte data, 2 GB / day, 4 TB / 5 yrs
+- seatch(key, keywork, city, radius, startday, endday, sort_order)
+- return data in JSON format, 
+- ReserveSeatc(key, session, movie, shwo, seats[])
+- return reservation status, 
+- ActiveReservationSearch
+- WaitForReservation service, 
+- 
+
 ### Storage
 - REDIS DB, in memory database,
 
@@ -121,3 +159,11 @@
 - ref [highscalability.com](http://highscalability.com/blog/category/example)
 - ref [free course](https://systeminterview.com/scale-from-zero-to-millions-of-users.php)
 - ref [on github](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design)
+
+
+### key concepts: 
+-  Scalability, Reliability, Availability, Efficiency, and Manageability,
+-  Cassandra mongodb better scales horizontally, mysql scales vertically,
+-  add redundancy to ensure consistemcy and availability, but at a cost, 
+-  
+-  
