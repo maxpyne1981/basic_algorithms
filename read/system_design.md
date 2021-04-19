@@ -80,7 +80,17 @@
 - ref [video](https://www.youtube.com/watch?v=wYk0xPP_P_8&t=16s)
 - ref [diagram](https://imgur.com/6TFkVL2)
 
-### Facebook
+### Facebook news feed design
+- 300M DAU, each user follows say 300 friends + 200 groups, 1.5 TB of data, 18k requests per second, 
+- 300M * 5 times a day / (24hr * 3600s): 17500 requests per seconds,
+- feed storage: 500 posts * 1KB * 300M * 5 = 150 TB, 2000 machins with 100GB memory, 
+- API design: GetNewsFeed(key, user, since), PostFeed(key, userid, itemid,)
+- Database design: User, Entity, FeedItem, FeedMedia<- FeedItem
+- system: webserer, app server, (user + post + media) databases + cache, generate feed service + cache, feed notification service, webserver, push / pull to user
+- notification: pull / push / hybrid, for mobile do not do push, limited bandwidth, 
+- feed ranking: time + like + views etc
+- data partitioning
+
 
 ### Tiny URL
 
