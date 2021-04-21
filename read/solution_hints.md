@@ -81,6 +81,14 @@
   - start from right
   - use a stack to find next greatest
 
+### subsets 
+- sbsets: start with empty set, loop over array, copy data into existing sets, and insert into set
+- subset with duplicates: sort, if adding a duplicate, only add it to the sets added in last iteration, otherwise add to all existing sets, 
+- permutations: push empty set ino queue, pop each vector, insert new element in all possible places, if size == n, push to result, otherwise, push to queue, 
+
+### heap
+- connect ropes: push all lengths into a maxHeap, take top 2, sum , add to result, push result back to the heap, 
+
 ### arrays
 
 ### Two pointer
