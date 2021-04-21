@@ -1,8 +1,11 @@
 ### different components of a system design
 - load balancer: amazon elastic load balancer, 
-- NoSql dbs: amazon dynamo db, cassandra,
-- Sql Dbs: MySql, PostGl, 
+- NoSql dbs: amazon dynamo db, cassandra, (read heavy, no join is needed)
+- Sql Dbs: MySql, PostGl, (read / write ACID, join operations needed)
 - Network protocols: communication handshake: HTTP(), 
+- load balancer: / gatwway to communicate with app server, 
+
+- 
     
 
 
@@ -114,6 +117,24 @@
 - return reservation status, 
 - ActiveReservationSearch
 - WaitForReservation service, 
+
+### Design tiktok
+- user profile, upload video, view video, Follower/ FOllowing
+- create APIs, createUserProfile(), updateUSerProfile(), 
+- uploadViero(key, userid, videoFile, metadata)
+- getVideo(key, userid, videoid, bandwidth)
+- showVide();
+- estimates, definitely show estimates, 
+- store user profile, in NOSql, read heavy, join is not needed, 
+- profile picture / video 
+- upload video : use multiple compression on video, one video will be converted into multiple video,
+- put it in distributed file server, then the files are distribited over CDN
+- S3, object store, 
+- cache between the server and the filesystem, 
+- use a microservice, 
+- DB to keep uiser / video relation,but the actual files are stored into a separate file server, 
+- async a video encoding, 
+- break services into multiple services, use checksum or sha to find out if the video exists, 
 - 
 
 ### Storage
