@@ -185,6 +185,31 @@
 - started in 2003
 - MVC; Convention over configuration; DRY (Dont repeat yourself)
 
+
+### pinterest
+- share links, boards, share links, 
+- public board / private board, 
+- looking for links / no images at this point, 
+- no limit on how many links, 
+- non functional : assumptions
+-   login / account management / security is already there/ 
+- functional requirement
+-   do we need a consistent view ?
+-   add new boards
+-   list all my boards, 
+-   view boards, check permission, 
+-   no cloning / like feature, 
+-   need a timeline/ lag in timeline, 
+-   eventual consistency, 
+-   Share individually, 
+-   list all boards shared with me, sort feature, 
+
+### estimates
+- 500 mil/ month, across globe. 
+- 24M DAU, equal user across the day,  1M / hr -> reading, 0.1M user writing, read heavy service, 
+- 0.1M / 3600 s => 3000 
+
+
 ### General system design blogs
 - ref [blog](https://github.com/checkcheckzz/system-design-interview)
 - ref [highscalability.com](http://highscalability.com/blog/category/example)
