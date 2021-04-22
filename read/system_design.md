@@ -1,3 +1,8 @@
+### system design overview
+- estimation: bandwidth , storage space, 720 p, 30FPS, 4MB/s
+- 
+
+
 ### different components of a system design
 - load balancer: amazon elastic load balancer, 
 - NoSql dbs: amazon dynamo db, cassandra, (read heavy, no join is needed)
@@ -203,6 +208,11 @@
 -   eventual consistency, 
 -   Share individually, 
 -   list all boards shared with me, sort feature, 
+- user: id, name, email, phone, dob, etc
+- board: id, name, created by, owners, followers, create time, update time, 
+- links: id, original url (1000 char), hash (128 chars), title, open graph details, 
+- board-> link: board id _> link-id (uniq pair)
+-     
 
 ### estimates
 - 500 mil/ month, across globe. 
