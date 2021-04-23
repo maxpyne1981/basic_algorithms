@@ -1,6 +1,19 @@
 ### system design overview
 - estimation: bandwidth , storage space, 720 p, 30FPS, 4MB/s
-- 
+- long polling, web sockets, server sent
+-   ajax polling, 
+-   http long polling, server tries to respond within a timeout,
+-   websocket: persostent communication between server and client, keep the socket open, 
+-   server sent event SSE: 
+-   
+-   
+- databases
+-   sql: mysql, oracle, sqlite3, postgres, mariadb
+-   nosql: not ACID compliance (atomicity, consistency, isolation, durability)
+-       - keyvalue: dynamo, redis, voldemort, 
+-       - document: mongodb
+-       - widecolumn: cassandra, HBase, 
+-       - graph databases: Neo4J, InfiniteGraph, 
 
 
 ### different components of a system design
@@ -9,7 +22,6 @@
 - Sql Dbs: MySql, PostGl, (read / write ACID, join operations needed)
 - Network protocols: communication handshake: HTTP(), 
 - load balancer: / gatwway to communicate with app server, 
-
 - 
     
 
@@ -101,6 +113,24 @@
 
 
 ### Tiny URL
+- 500M links / month, 100: 1 read / write, 
+- New URLs	200/s
+- URL redirections	20K/s
+- Incoming data	100KB/s
+- Outgoing data	10MB/s
+- Storage for 5 years	15TB
+- Memory for cache	170GB
+- APIs
+-   createURL() // timelimit, 
+-   deleteURL()
+- Database
+-   user data
+-   URL data, 
+-   NOSQL database, use base 36 or base 64,  base 64, 8 char will be enough
+-  pregenerate keys, keep in memory, as soon as one is used, update tanles, 
+-  KSG: key generation service, have a replicae ready, 
+-  tiny -> URL db: partition based on alphabate, 
+-  partition based on their hash, 
 
 ### Yelp / map search 
 - add / del/ edit entry
