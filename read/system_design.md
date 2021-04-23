@@ -5,8 +5,6 @@
 -   http long polling, server tries to respond within a timeout,
 -   websocket: persostent communication between server and client, keep the socket open, 
 -   server sent event SSE: 
--   
--   
 - databases
 -   sql: mysql, oracle, sqlite3, postgres, mariadb
 -   nosql: not ACID compliance (atomicity, consistency, isolation, durability)
@@ -14,7 +12,17 @@
 -       - document: mongodb
 -       - widecolumn: cassandra, HBase, 
 -       - graph databases: Neo4J, InfiniteGraph, 
-
+-  partitioning:
+-       - range based, 
+-       - hash based, 
+-       - round robin, 
+-  indexes     
+-            
+- cache: memcache, redis, 
+    - write through
+    - write aroung
+    - write back
+    - eviction: FIFO, LIFO, LRU, LFU, MRU (most), RR (random replacement)
 
 ### different components of a system design
 - load balancer: amazon elastic load balancer, 
