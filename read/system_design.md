@@ -8,16 +8,16 @@
 - databases
 -   sql: mysql, oracle, sqlite3, postgres, mariadb
 -   nosql: not ACID compliance (atomicity, consistency, isolation, durability)
--       - keyvalue: dynamo, redis, voldemort, 
--       - document: mongodb
--       - widecolumn: cassandra, HBase, 
--       - graph databases: Neo4J, InfiniteGraph, 
--  partitioning:
--       - range based, 
--       - hash based, 
--       - round robin, 
+-       keyvalue: dynamo, redis, voldemort, 
+-       document: mongodb
+-       widecolumn: cassandra, HBase, 
+-       graph databases: Neo4J, InfiniteGraph, 
+-  partitioning: 
+-       range based, 
+-       hash based, 
+-       round robin, 
 -  indexes     
--            
+- CAP theorem:   consistency, availability, partition tolerance,          
 - cache: memcache, redis, 
     - write through
     - write aroung
@@ -269,7 +269,20 @@
 -  Scalability, Reliability, Availability, Efficiency, and Manageability,
 -  Cassandra mongodb better scales horizontally, mysql scales vertically,
 -  add redundancy to ensure consistemcy and availability, but at a cost, 
--  
+
+
+# webcrawler
+- crawls web starting from seed page, copyright, mirror, search, scalable, 
+- only html ? or media ? store ? or just search ?
+- robot-exclusion, saved in robot.txt, couresey service, do not crawl, 
+- 15Bpage / month = 6200 page / sec. 
+- 15 B page * 100 KB = 1.5 petabute, 
+- start from seed, get ip address, connect, get page, parse, extract info, gew new url, push new url to unvisited lists, 
+- dfs within same website, bfs across muliple website, 
+- find usrl, connet, extract info, remove duplicate, 
+- 
+- 
+- 
 
 ## object oriented deisgn
 
