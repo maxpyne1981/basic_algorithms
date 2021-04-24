@@ -106,9 +106,26 @@
 -   userid + startTime, 
 -   use redis to store the table, use their lock function to avoid race condition, 
 - extimation: 32 byte * 1M users,
--      
+- shard based on user id, find server using consistent hashing,
+- handle video duplication:       
 
 
+### design Youtube
+- upload, share, search title, see stats, add view comments, 
+- fast, available, real-time experience, 
+- estimation: 
+-   read 800M * 5 video / day, / 46k video / sec
+-   write: 200 video / sec
+-   1 min video ~ 50 MB, =? 25 GB .sec,
+-   1TB outgoing bandwidth
+- APIs
+-   uploadVideo(), searchVideo(), streamVideo(id, bandwidth),
+- upload video
+-   queue, encode into multiple versions for diff resolutions, thumbnail generation, en   
+-   files are stored in distributed filesystem, HDFS, 
+-   user database, video database, video metadata storage, 
+-   use MySql for DBs, 
+-   
 ### Twitter
 - Frontend: Ruby on rails for; Scala/Java: Backend
 - Apache Thrift (Facebook) to communicate between different services, 
