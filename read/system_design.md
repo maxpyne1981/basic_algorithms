@@ -85,6 +85,28 @@
 ### AWS
 - EC2 scalable computing, S3 scalable storage, 
 
+### API rate limiter
+- throttle based on number of requests received, 
+- for given user, # of requests are fixed, 
+- saves from DDOS attack, pw attempts, cridit card transaction, etc
+- blocks, automation, security, 
+- requerement: 
+-   15 requests per second,
+-   available / low latency, 
+-   if exceeds, return error 'too many requests'
+- throttle
+-   hard
+-   soft  
+- algoritms: 
+-   fixed window,   
+-   sliding window
+-   sliding window with counter (sliding window histogram)
+- design: client: server, ratelimiter, logic server, 
+- database: 
+-   userid + startTime, 
+-   use redis to store the table, use their lock function to avoid race condition, 
+- extimation: 32 byte * 1M users,
+-      
 
 
 ### Twitter
