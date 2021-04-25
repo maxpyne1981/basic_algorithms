@@ -58,8 +58,47 @@
 - nosql: fast, key-value, rapid development, 
 - CAP theorem: consistency, availbility, partition tolerance, 
 - consistent hashing: key % n -> not horizontally scalable, not load balanced, 
+- have a news feed table to see generated newsfeeds, 
 - 
+ 
+### instagram:
+- photo sharing, public / private, 
+- Requirements:
+-   uplaod/ download/ view 
+-   search title, follow others, 
+-   generate feed, 
+-   available, 200 ms latency, low consistency, releiable,    
+- 100M user, 1M DAU, 2M photo / day, 23 photo / sec, file 200 KB, 1 day = 400 GB, 10 yrs 1425 TB, 
+- database: photo + metadata, user + metadata, user -> follower map,   use MYSQL to store tables, and HDFS or S3 for 
+- userphoto and userfollower: use wide column like cassandra, 
+ 
+### facebook messenger
+- one to one mesg, online offline status, persistent storage for chat, 
+- realtime experience, consistent, available, 
+- extend to group chat, push, 
+- storage: 2TB / day, bandwidth : 2TB / day ~= 25 MB/ss
+- different users logged into different server, 
+- use push model, to minimize resource, client keeps connection to server, use HTTP + long polling or websocket, 
+- server use hash table user -> connection, 
+- 50M user, 50K concurrant, 10k servers,
+- use a sequenct to maintain the correct view by the user, 
+- frequent read / write / store data in wide column: HBase, 
+- use a session service to maintain status, 
+- on server failure, user automatically reconnect to another server, 
+- group chat: groupid -> (user + time of join)
 
+### dropbox / gdrive
+- available, reliable, scalable, 
+- upload / download, share, auto sync with device, ACID, version control, 
+- files are stored as objects of 4MB chunks, keep local copy of metadata, 
+- user profile, file storage, file metadata store, shared with, 
+- client does sync with the server, 
+-   upload, download, detect a file change, 
+-   keep a local copy of the metadata, 
+- update client using HTTP long polling,
+- need a chunker,
+- NoSQL + ACID, 
+- clien -> mesg queue -> sync service,       
 
 ### netflix 
 - stat: 110mil subscribers, 220 countries, 3B revenue/quarter, 250mil hrs of vide / day, 1B hrs video / week, 37% of peak US traffic,
