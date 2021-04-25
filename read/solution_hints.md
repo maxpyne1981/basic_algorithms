@@ -144,6 +144,8 @@
 ### Dynamic programming
   - [LC](https://leetcode.com/problems/house-robber/) rob house 
 
+### graph
+  - topological sort/ course schedule: create adjuscency list, seen set, start from any node, run dfs through all children, then add to sortedOrder, 
 
 ### study materials
 - [MIT OpenCourse](https://www.youtube.com/watch?v=HtSuA80QTyo)
