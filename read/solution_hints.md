@@ -145,7 +145,8 @@
   - [LC](https://leetcode.com/problems/house-robber/) rob house 
 
 ### graph
-  - topological sort/ course schedule: create adjuscency list, seen set, start from any node, run dfs through all children, then add to sortedOrder, 
+  - topological sort: create adjuscency list, seen set, start from any node, run dfs through all children, then add to sortedOrder, 
+  - course schedule, can finish: detect cycle in DAG, assign 0, 1, 2 for nodes unprocessed, processed and processing nodes, run dfs, detect cycle, 
 
 ### study materials
 - [MIT OpenCourse](https://www.youtube.com/watch?v=HtSuA80QTyo)
